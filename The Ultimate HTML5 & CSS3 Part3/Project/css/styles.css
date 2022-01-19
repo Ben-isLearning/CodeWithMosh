@@ -1,3 +1,11 @@
+:root {
+  --color-primary: #43bc17;
+  --color-secondary: #52d523;
+  --color-accent: #6c5013;
+  --color-heading: #a858ef;
+  --color-body: #5d58ef;
+}
+
 * {
   box-sizing: border-box;
   font-size: 62.5%;
