@@ -1,0 +1,63 @@
+:root {
+  --color-primary: #43bc17;
+  --color-secondary: #52d523;
+  --color-accent: #6c5013;
+  --color-heading: #a858ef;
+  --color-body: #7e7daa;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Prompt", sans-serif;
+}
+
+html {
+  /* Default is 16px, *62.5 = Set font size down to 10px. But maintain scalability! */
+  font-size: 62.5%;
+}
+body {
+  color: var(--color-body);
+  font-size: 2.4rem;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-heading);
+  margin-bottom: 1rem;
+}
+
+h1 {
+  /* 10px x 7 = 70px, but its scalable! */
+  font-size: 7rem;
+}
+
+h2 {
+  /* 10px x 4 = 40px, but its scalable! */
+  font-size: 4rem;
+}
+
+h3 {
+  /* 10px x 3 = 30px, but its scalable! */
+  font-size: 3rem;
+}
+
+p {
+  margin-top: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 1.8rem;
+  }
+  h1 {
+    font-size: 8rem;
+  }
+  h2 {
+    font-size: 4rem;
+  }
+  h3 {
+    font-size: 2.4rem;
+  }
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,400;0,800;1,200&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Prompt", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>All about Fonts + Sizes.</h2>
+    <p>
+      **Take the "Mobile First" design approach** <br />
+      Inspecitng Moshify example, There are 2 fonts with varying weights and
+      sizes. <br />
+      Lets select our own fonts from
+      <a href="https://fonts.google.com">Google Fonts</a> <br />
+      <br />
+      Using Google's CND we'll link up the "prompt" font style. <br />
+      With pasting... in our head. <br />
+      &lt;link rel="preconnect" href="https://fonts.googleapis.com"> &lt;link
+      rel="preconnect" href="https://fonts.gstatic.com" crossorigin> &lt;link
+      href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,400;0,800;1,200&display=swap"
+      rel="stylesheet"> <br /><br />
+
+      Then creating the CSS rule: <br />
+      font-family: 'Prompt', sans-serif;
+      <br />
+      <br />
+        <h2>Standardization</h2>
+      Then Set universal sizing... 1rem = 10px <br />
+
+      Convert default size from 16px to 10px by <br />
+      <br />
+      html {<br />
+      /* Default is 16px, *62.5 = Set font size down to 10px. But maintain
+      scalability! */ <br />
+      font-size: 62.5%;<br />
+      }
+      <br />
+      <h2>Scalable Sizes </h2>
+      Then inspect our design sheet, Identify spacing in Px, then convert to rem
+      <br />
+      Then set rems for each heading. <br />
+      <br />
+      h3 {<br />
+      /* 10px x 3 = 30px, but its scalable! */<br />
+      font-size: 3rem;<br />
+      margin-bottom: 1rem;<br />
+      }<br />
+        <h2>Margins!</h2>
+        Our margins aren't behaving as expected... why? <br />
+      Because of margin-collapsing <br />
+      the bottom-marin of our h3 is 1rem, but our top-margin of the p below
+      <br />
+      is 25px (greater than 1rem). As such the collapsed (or shared) margin is
+      overwritten by default. <br />
+      So lets set the margin-top of our p to 0. <br />
+      2rem + 0... No margin-collapsing! <br />
+      <br />
+      p { <br />
+      margin-top: 0; <br />
+      } <br />
+      <br />
+     
+      We need to set the bottom-margin for all our h1, h2, and h3 element.
+      <br />
+      Adhering to Object Oriented Programming and DRY principles, <br />
+      (1 Does 3) Add one line of code, to one rule targeting three elements
+      <br />
+      (3 Each do 1) Rather than adding 1 line of code to three different rules
+      targeting single elements <br />
+      <br />
+      h1, <br />
+      h2, <br />
+      h3 { <br />
+      color: var(--color-heading); <br />
+      margin-bottom: 1rem; <br />
+      } <br />
+      <br />
+
+      <h2>Serving appropreate Sizes!</h2>
+      After Selecting the colors, standardizing our sizes, and setting our margins... <br> 
+      We're ready to consider what size media we're serving to. <br>
+      Using... @media screen and (min-width: 1024px) {xxx} <br>
+      We can check if the media screen is above or below 1024px and act accordingly... <br>
+      Desktop vs Mobile <br> <br>
+      Desktop we've set h1, h2, h3, p To 7rem 4rem, 3rem and 2.4rem respectively. <br>
+      Mobile we've set h1, h2, h3, p To  8rem, 4rem, 2.4rem and 1.8rem respectively. <br> <br>
+      These slight differences ensure the sence of scale is maintained throughout devices. <br>
+
+    </p>
+  </body>
+</html>
