@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        background-color: black;
+        color: white;
+        padding: 10px 50px;
+        width: 98vw;
+        height: 20vh;
+        flex-direction: column;
+        text-align: center;
+        list-style-type: none;
+      }
+
+      .item {
+        padding: 10px;
+      }
+
+      @media screen and (min-width: 768px) {
+        .container {
+          flex-direction: row;
+          justify-content: flex-end;
+          height: 5vh;
+          padding: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul class="container">
+        <li class="item">About</li>
+        <li class="item">Courses</li>
+        <li class="item">Forum</li>
+        <li class="item">Learning Paths</li>
+        <li class="item">Contact</li>
+      </ul>
+    </nav>
+  </body>
+</html>

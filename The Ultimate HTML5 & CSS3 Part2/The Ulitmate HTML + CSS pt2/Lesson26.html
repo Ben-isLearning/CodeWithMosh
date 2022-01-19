@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Supporting High-Density Screens</h1>
+
+    <h3>
+      Physical Resolution: The Size of the physical Screen <br />
+      Logical Resolution: The Size of screen CSS Uses <br />
+      Device Pixel Ratio (DPR): Physical Size / Logical Size (2 / 2.1 / 2.2 / 3
+      )<br />
+
+      High desity screen = DPR > 1 <br />
+    </h3>
+    <h4>
+      Naming Convention for files <br />
+      Image.jpg Needs to be 400px / 400px / <br />
+      Image@2x.jpg Needs to be 800px x 800px / <br />
+      Image@3x.jpg Needs to be 1200px x 1200px / Compression = 7 <br />
+      <br />
+      Start with large image and work your way down!
+    </h4>
+    <h3>
+      To serve different images for different screen sizes <br />
+      Use the attribute srcset="image.jpg 1x, image@2x.jpg 2x, image@3x.jpg 3x,"
+      <br />
+      <br />
+      This is used for fixed sized images ONLY <br />
+      that need to be crystal clear - Dont use for every image <br />
+    </h3>
+  </body>
+</html>

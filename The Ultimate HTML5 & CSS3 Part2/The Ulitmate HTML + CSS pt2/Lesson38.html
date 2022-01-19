@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form {
+        width: 50%;
+        padding: 2rem;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+  </head>
+  <body>
+    <h1>Radio Buttons / Sliders / File Inputs</h1>
+
+    <div>
+      <h2>Radio Buttons</h2>
+      <p>
+        Limit user to chosing only one of the options in the list <br />
+        can use dropdown, or best practice, Radio Buttons! <br />
+        input.id === lable.for <br />
+        the <strong>name=""</strong> attribute can be used to group multiple
+        radio butttons. <br />
+        And again, best practice is to include each Input + Label pair in thier
+        own Div <br />
+        <br />
+
+        In the below example, both radio button have name="membership" <br />
+        as such, only 1 can be selected. <br />
+      </p>
+    </div>
+    <form action="">
+      <div>
+        <input type="radio" name="membership" id="silver" />
+        <label for="silver" class="label-inline">Silver</label>
+      </div>
+      <div>
+        <input type="radio" name="membership" id="gold" />
+        <label for="gold" class="label-inline">Gold</label>
+      </div>
+    </form>
+    Radio buttons support the Checked attribute. <br />
+    <form action="">
+      <div>
+        <input type="radio" name="membership" id="silver" />
+        <label for="silver" class="label-inline">Silver</label>
+      </div>
+      <div>
+        <input checked type="radio" name="membership" id="gold" />
+        <label for="gold" class="label-inline">Gold</label>
+      </div>
+    </form>
+
+    Radio buttons also support the disabled attribute. <br />
+    <form action="">
+      <div>
+        <input disabled type="radio" name="membership" id="silver" />
+        <label for="silver" class="label-inline">Silver</label>
+      </div>
+      <div>
+        <input disabled type="radio" name="membership" id="gold" />
+        <label for="gold" class="label-inline">Gold</label>
+      </div>
+    </form>
+    <br />
+
+    <div>
+      <h2>Sliders</h2>
+      <p>
+        Sliders can be implemented to represent a numeric value. <br />
+        Just think of every "interactive" survey we've ever done... <br />
+        <br />
+        this is acheived by &lt;input type="range"> <br />
+        This type of input requires; <br />
+        the <strong>min="" </strong>attribute (to set a minimun)
+        <br />
+        the <strong>max=""</strong> attribute (to set a maximum) <br />
+        the <strong>value=""</strong>attribute (to set a starting position)
+        <br />
+      </p>
+    </div>
+    <form action="">
+      <input type="range" min="0" max="100" value="75" name="" id="" />
+    </form>
+    We can't show the value of the slider using only HTML and CSS. <br />
+    But with JavaScript, we can listen to the changes in the value of the
+    slider, <br />
+    and display the changed value in a seperate label. <br />
+    (Outside the scope of this course)
+    <br />
+    <br />
+    <div>
+      <h2>File Inputs</h2>
+      <p>
+        File inputs can be implemented to allow users to upload their own
+        documents to the website. <br />
+        This is acheived by &lt;input type="file"> <br />
+        the "multiple" attribute allows multiple files to be selected at once
+        <br />
+        the 'accept="" ' attribute restricts the upload to specified file types.
+        <br />
+        the accept attribute allows multiple values, seperated with a commas.
+        <br />
+        accept=".svg, .png, .jpg". <br />
+        or accept="image/*" for all image formats <br />
+        or accept="video/*" for all video formats <br />
+        or accept="audio/*" for all audio formats <br />
+      </p>
+    </div>
+    <form action="">
+      <input type="file" name="" id="anyfile" />
+      <label for="anyfile">This will upload anything</label>
+    </form>
+    <form action="">
+      <input accept=".xxx" type="file" name="" id="xxxfile" />
+      <label for="xxxfile">This will upload only .XXX files </label>
+    </form>
+
+    <div>
+      <h2></h2>
+      <p></p>
+    </div>
+  </body>
+</html>

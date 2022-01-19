@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form {
+        width: 50%;
+        padding: 2rem;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+  </head>
+  <body>
+    <h1>Check Boxes</h1>
+
+    <div>
+      <h2></h2>
+      <p>
+        simply &lt;input type="checkbox" <br />
+        But checkboxes need a label AFTER, not BEFORE. <br />
+        input.id === label.for <br />
+        Can click on Checkbox + Label to acheive result. <br />
+      </p>
+    </div>
+
+    <form action="">
+      <input type="checkbox" id="front-end" />
+      <label class="label-inline" for="front-end">Front-end</label>
+    </form>
+    <br />
+    But as a best practice, wrap each Input + Label pair in a div of their own.
+    <br />
+
+    <form action="">
+      <div>
+        <input type="checkbox" id="front-end1" />
+        <label class="label-inline" for="front-end1">Front-end</label>
+      </div>
+      <div>
+        <input type="checkbox" id="back-end" />
+        <label class="label-inline" for="back-end">Back-end</label>
+      </div>
+    </form>
+    <br />
+    If we want a checkbox checked by default, simply include the "checked"
+    attribute (Boolean Value) <br />
+    on the input. <br />
+    <form action="">
+      <div>
+        <input type="checkbox" id="front-end2" />
+        <label class="label-inline" for="front-end2">Front-end</label>
+      </div>
+      <div>
+        <input checked type="checkbox" id="back-end1" />
+        <label class="label-inline" for="back-end1">Back-end</label>
+      </div>
+    </form>
+
+    This also works for the "disabled" attribute (Also a Boolean Value)
+    <form action="">
+      <div>
+        <input disabled type="checkbox" id="front-end3" />
+        <label class="label-inline" for="front-end3">Front-end</label>
+      </div>
+      <div>
+        <input disabled type="checkbox" id="back-end2" />
+        <label class="label-inline" for="back-end2">Back-end</label>
+      </div>
+    </form>
+    <div>
+      <h2></h2>
+      <p></p>
+    </div>
+
+    <div>
+      <h2></h2>
+      <p></p>
+    </div>
+
+    <div>
+      <h2></h2>
+      <p></p>
+    </div>
+
+    <div>
+      <h2></h2>
+      <p></p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background: gold;
+      }
+      .box:hover {
+        border: 2px solid darkblue;
+      }
+
+      #a:hover {
+        transform: rotate(45deg);
+      }
+      #aa:hover {
+        transform: rotate(-25deg);
+      }
+
+      #aaa:hover {
+        transform: scale(2);
+      }
+      #aaaa:hover {
+        transform: scale(0.5);
+      }
+
+      #b:hover {
+        transform: translateX(50px) translatey(50px);
+      }
+
+      #bb:hover {
+        transform: translate(-50px, -50px);
+      }
+
+      #bbb:hover {
+        transform: skew(20deg);
+      }
+
+      #bbbb:hover {
+        transform: skew(20deg, 20deg);
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+  </head>
+  <body>
+    <h1>Transformations</h1>
+    Using ~ transform: rotate() | scale() | translate() | skew() <br />
+    To acheive 2D transformations - on the X and Y Axis.
+    <br />
+    <div id="a" class="box">Hover to Rotate</div>
+    <div id="aa" class="box">Hover to Rotate Back</div>
+    <div id="aaa" class="box">Hover to scale x2</div>
+    <div id="aaaa" class="box">Hover to scale x.5</div>
+    <div id="b" class="box">Hover to translate X and Y</div>
+    <div id="bb" class="box">Hover to traslate both</div>
+    <div id="bbb" class="box">Hover to Skew once</div>
+    <div id="bbbb" class="box">Hover to Skew Twice</div>
+  </body>
+</html>

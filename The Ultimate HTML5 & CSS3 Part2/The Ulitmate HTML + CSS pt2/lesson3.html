@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        border: 5px solid blue;
+      }
+      .overflow {
+        width: 200px;
+        height: 200px;
+        border: 5px solid blue;
+        overflow: hidden;
+      }
+      .overflow2 {
+        width: 200px;
+        height: 200px;
+        border: 5px solid blue;
+        overflow: scroll;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Overflow</h1>
+    <p>
+      When content exceeds its container... Like the below It's called overflow.
+      <br />
+      the Overflow: property sets behaviour when this occurs
+    </p>
+    <div class="box">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil dolor
+      repudiandae, porro quis harum vero sed numquam vel ad provident eum
+      corrupti totam magni, nisi, earum libero mollitia. Dignissimos, alias
+      provident tempora laboriosam doloremque magni possimus minus incidunt,
+      quasi nihil nam quo iure? Molestiae officiis dolores nostrum quaerat
+      corrupti tenetur!
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <p>
+      Set overflow: hidden; - The box stays the same size any extra content is
+      dropped
+    </p>
+    <div class="overflow">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil dolor
+      repudiandae, porro quis harum vero sed numquam vel ad provident eum
+      corrupti totam magni, nisi, earum libero mollitia. Dignissimos, alias
+      provident tempora laboriosam doloremque magni possimus minus incidunt,
+      quasi nihil nam quo iure? Molestiae officiis dolores nostrum quaerat
+      corrupti tenetur!
+    </div>
+    <br />
+    <p>
+      Set overflow:scroll; - The box stays the same size but the content scrolls
+    </p>
+    <div class="overflow2">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil dolor
+      repudiandae, porro quis harum vero sed numquam vel ad provident eum
+      corrupti totam magni, nisi, earum libero mollitia. Dignissimos, alias
+      provident tempora laboriosam doloremque magni possimus minus incidunt,
+      quasi nihil nam quo iure? Molestiae officiis dolores nostrum quaerat
+      corrupti tenetur!
+    </div>
+  </body>
+</html>

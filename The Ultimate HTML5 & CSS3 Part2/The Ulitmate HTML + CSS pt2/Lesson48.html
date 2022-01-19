@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form {
+        width: 50%;
+        padding: 2rem;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+  </head>
+  <body>
+    <h1>Object-oriented CSS</h1>
+    <div>
+      <h2>A set of principals for creating reusable components</h2>
+      <p>
+        <h5>1) Seperate container from content <br /></h5>
+        <strong
+          >Setting a rule for .parent .child {xxx} is bad practice.</strong
+        >
+        <br />
+        Because there is probably only one situation you can use it. <br />
+        IRL example - rather than having creating a RED CHAIR rule <br />
+        Create a RED rule and a CHAIR chair rule to serve the purpose. <br />
+        You can then re-use the RED or the CHAIR rule elsewhere. <br />
+        <strong>Set two rules, .parent {xxx} and .child {xxx} </strong>
+        <br>
+        <br>
+        <h5>2) Seperate Structure from Skin </h5>
+        <strong>
+          Setting a rule; <br>
+          .blue-box {height: 200px; width:200px; background-color: dodgerblue;}
+        </strong><br>
+        that inludes both structural (size, padding etc) and skin (colors) <br>
+        Is bad practice, because this cannot be reused. <br>
+        <strong>
+          Set two rules; <br>
+          .blue {background-color: dodgeblue;} <br>
+          .box  {height:200px; width:200px;} <br>
+        </strong>
+
+
+      </p>
+    </div>
+  </body>
+</html>

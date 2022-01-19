@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/style.css">
+  </head>
+  <body>
+    <div class="lesson-holder lessonx">
+        <article class="lesson">
+          <div class="information informationx">
+            <h2>CSS/3</h2>
+            <p>Relational Selectors (Cominator Selectors)</p>
+            <p>01) Descendant Selector: a space between parent and child <br>
+              parent child {property:value;} <br> *Selects all elements that are decendents of the specified element <br> 
+              div p {background-color:yellow;} Will target all decendent Ps within Div</p>
+            <p>02)Child Selector: a &gt; between the parent and child <br> 
+            parent > child {property:value;} <br> *Selects all elements that are direct children of the specified element <br> 
+            div > p {background-color:blue;} Will target Ps that are direct chidren of Div </p>
+            <p>03) Adjacent Sibling Selector: a + between sibling and sibling  <br>
+              Sibling1 + Sibling2 {property:value;} <br> *Selects all siblings2 that immediately follow the other sibling1 <br> 
+              div + p {color: red;} Will target all of the FIRST Ps that immediately follow Divs. </p>
+           <p>04)General Sibling Selector: a ~ between sibling and sibling <br>
+              Sibling1 ~ Sibling2 {property:value;} <br> *Selects all elements that are Later siblings of an element. <br>
+              div ~ p {color:blue;} Will target all later P siblings of Div. </p>
+            <p> Inheritence / Cascade - Set parent, effects Child  </p>
+            <p><a href="index.html"> Take me home!</a></p>
+          </div>
+          <div>
+            <img
+              class="image"
+              src="Images/cssLesson3.jpg"
+              alt="Related image to the lesson"
+            />
+        </article>
+    </div>
+  </body>
+</html>

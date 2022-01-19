@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/style.css">
+  </head>
+  <body>
+    <div class="lesson-holder lessonx">
+        <article class="lesson">
+          <div class="information informationx">
+            <h2>CSS/2</h2>
+            <p>Basic Selectors</p>
+            <p>Syntax: Selector {property:value;} <br> 
+              Basic selectors are  ID / Class / Type  <br> 
+              &lt;h1 id="xxx"&gt; Hello &lt;/h1&gt; <br> 
+              &lt;h2 class="aaa"&gt; Hello &lt;/h2&gt; <br> &lt;h3 &gt; Hello &lt;/h3&gt;</p>
+            <p>These adhere to specificity, 
+              <br>if 2 rules conflict, the most "valuable" rule will win. <br>
+               100) To select by ID; #xxx {color: green;} <br> 
+               010) to select by Class; .aaa {color: red;} <br> 
+               001) to select by type h3 {color: purple;} </p>
+            <p>Attribute Selectors<br> 
+              Selector[attribute] | Selects all elements with a specific attribute | a[target]   <br>
+              selector[attribute=value] all elements with attribute with a specific value | a[target=_blank]               <br>
+              selector[attribute~=value] | all elements with the attribute containing "some" | article[title~=some]              <br>
+               Selector[attribute^=value] | elements who's attribute begins with value | a[href="https"]              <br>
+               selector[attribute$=value] | elements who's attribute ends with value | a[href=".pdf"]                <br>
+               selector[attribute*=value] | elements who's attribute contains value | a[href="google"] <br> </p>
+            <p><a href="index.html"> Take me home!</a></p>
+          </div>
+          <div>
+            <img
+              class="image"
+              src="Images/cssLesson2.jpg"
+              alt="Related image to the lesson"
+            />
+        </article>
+    </div>
+  </body>
+</html>

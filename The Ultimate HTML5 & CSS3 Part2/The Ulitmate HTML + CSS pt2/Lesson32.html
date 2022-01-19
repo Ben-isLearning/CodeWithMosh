@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        line-height: 1.5;
+        padding: 1rem;
+      }
+      label {
+        display: block;
+      }
+      input[type="text"],
+      input[type="email"] {
+        border: 1px solid ccc;
+        border-radius: 5px;
+        padding: 0.5rem 0.7rem;
+        transition: border-color 0.15s, box-shadow 0.15s;
+      }
+      input[type="text"]:focus,
+      input[type="email"]:focus {
+        border-color: #7db0fb;
+        outline: 0;
+        box-shadow: 0 0 0 4px rgba(24, 117, 255, 0.25);
+      }
+
+      button {
+        background: #0d6efd;
+        color: #fff;
+        border: 0;
+        padding: 0.5rem 0.7rem;
+        border-radius: 5px;
+        outline: 0;
+      }
+
+      .form-group {
+        margin-bottom: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Styling a Form</h1>
+    <div>
+      <h2>CSS o'clock!</h2>
+      <p>
+        We're gonna pretty up the form that was created the previous lesson.
+        <br />
+        <br />
+        CSS Tip; Order your CSS blocks by Reverse-Specificity <br />
+        Generic > Classes > IDs
+        <br />
+        (top middle bottom) <br />
+      </p>
+    </div>
+
+    <form>
+      <div class="form-group">
+        <label for="name">Name </label>
+        <input id="name" type="text" />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email </label>
+        <input id="email" type="email" />
+      </div>
+      <button type="submit">Register</button>
+      <button type="reset">Reset</button>
+    </form>
+
+    <div>
+      <h2></h2>
+      <p></p>
+    </div>
+
+    <div>
+      <h2></h2>
+      <p></p>
+    </div>
+
+    <div>
+      <h2></h2>
+      <p></p>
+    </div>
+
+    <div>
+      <h2></h2>
+      <p></p>
+    </div>
+
+    <div>
+      <h2></h2>
+      <p></p>
+    </div>
+  </body>
+</html>

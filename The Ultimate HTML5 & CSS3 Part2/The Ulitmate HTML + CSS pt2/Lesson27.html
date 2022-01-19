@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Resolution Switching</h1>
+    <h3>
+      Provide 3 images; Let the browser select the best one for the device at
+      hand (Mobile / Tablet / PC) <br />
+    </h3>
+
+    <h4>
+      To serve different images for different browser sizes - Independent of
+      screen size<br />
+      Use the attribute srcset="image.jpg 400w, image@2x.jpg 800w, image@3x.jpg
+      1200w,"
+      <br />
+      400 800 and 1200 are merely an example here, to set breakpoints
+      effectively <br />
+      Go to <a href="https://www.responsivebreakpoints.com"> Here</a> and set up
+      the <br />
+      Resolution range to cover (200 to 1400 is fine) <br />
+      Size Step (50kb is fine) <br />
+      Number of Images (5 is sufficient) <br />
+      Upload file <br />
+      Download generated image pack <br />
+      Copy and paste generated html <br />
+    </h4>
+    <h4>
+      To ensure the browser selects the correct file depdendant on the media
+      conditions <br />
+      Use the attributte sizes=" (max-width:500px) 100vw, (max-width:700px)
+      50vw, 33vw"
+      <br />
+    </h4>
+    <h4>
+      Browser selects image density (from srcset=) <br />
+      and correct image to serve dependant on screen size (from sizes=)
+    </h4>
+  </body>
+</html>

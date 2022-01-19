@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form {
+        width: 50%;
+        padding: 2rem;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+  </head>
+  <body>
+    <h1>Data Lists</h1>
+
+    <div>
+      <h2>Suggestion Lists in HTML</h2>
+      <p>
+        Create a list of suggestions in HMTL by using the &lt;datalist> element
+        <br />
+        Like Ul's contain Li's... datalist's contain options. <br />
+        the input must contain the<strong> list=""</strong> attribute <br />
+        Equal to the datalist <strong>id="</strong>" attribute. <br />
+        <br />
+        The <strong> value=""</strong> attribute is important serverside when
+        calculations <br />
+        But the <strong> value=""</strong> shows up with the selections and its
+        ugly... <br />
+        A work-around for this is creating a custom class<strong
+          >data-value=""
+        </strong>
+        <br />
+        Then later, using JS we can read the value of data-value as the same as
+        <strong>value="" </strong> <br />
+        <br />
+        In addition to this, we should disable the autocomplete attribute <br />
+        by declaring <strong>autocomplete="off" </strong> <br />
+        to ensure that the feild isnt auto-completed based on the users cache or
+        <br />
+        previous experiences. <br /><br />
+        The styling of the options list is set by the browser, which can cause
+        <br />
+        some variation between users.. <br />
+        the browser will override any external CSS <br />
+        This can be overcome through external CSS with psuedo classes and <br />
+        JavaScript funtionality (outside scope of course)
+      </p>
+    </div>
+    <form>
+      <input autocomplete="off" type="text" list="countries" />
+      <datalist id="countries">
+        <option value="1">Australia</option>
+        <option data-value="2">Kenya</option>
+        <option data-value="3">South Africa</option>
+        <option data-value="4">Somalia</option>
+      </datalist>
+    </form>
+
+    <div>
+      <h2></h2>
+      <p></p>
+    </div>
+
+    <div>
+      <h2></h2>
+      <p></p>
+    </div>
+
+    <div>
+      <h2></h2>
+      <p></p>
+    </div>
+
+    <div>
+      <h2></h2>
+      <p></p>
+    </div>
+
+    <div>
+      <h2></h2>
+      <p></p>
+    </div>
+
+    <div>
+      <h2></h2>
+      <p></p>
+    </div>
+  </body>
+</html>

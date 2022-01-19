@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form {
+        width: 50%;
+        padding: 2rem;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+  </head>
+  <body>
+    <h1>Drop-down Lists</h1>
+
+    <div>
+      <h2></h2>
+      <p>
+        Drop-down lists are created with the &lt;select> element <br />
+        Each value within the list is created with the &lt;option> element
+        <br />
+        Each option needs a value="x" attribute to be handled server side.
+      </p>
+    </div>
+
+    <form action="">
+      <select name="" id="">
+        <option value="">Select a Course...</option>
+        <option value="1">HTML</option>
+        <option value="2">CSS</option>
+        <option value="3">Javascript</option>
+      </select>
+    </form>
+    <br />
+    If we want to show a specific option by default, apply the "selected"
+    attribute to said element. (Boolean Value)<br />
+    (Rather than showing Select a Course... it will show Javascript (4th
+    option)) <br />
+    <form action="">
+      <select name="" id="">
+        <option value="">Select a Course...</option>
+        <option value="1">HTML</option>
+        <option value="2">CSS</option>
+        <option selected value="3">Javascript</option>
+      </select>
+    </form>
+    <br />
+
+    If we want to enable multiple selections, apply the "multiple" attribute to
+    the select element. (Boolean Value) <br />
+    <br />
+    <form action="">
+      <select name="" id="" multiple>
+        <option value="">Select a Course...</option>
+        <option value="1">HTML</option>
+        <option value="2">CSS</option>
+        <option selected value="3">Javascript</option>
+      </select>
+    </form>
+    <br />
+    If we want to categorize our many options, we can the &lt;optgroup> element
+    <br />
+    Put the desired options into the optgroup element. Each group needs a label.
+
+    <form action="">
+      <select name="" id="">
+        <optgroup label="Front-end Courses">
+          <option value="1">HTML</option>
+          <option value="2">CSS</option>
+          <option value="3">Javascript</option>
+        </optgroup>
+        <optgroup label="Back-end Courses">
+          <option value="1">Node.js</option>
+          <option value="2">ASP.NET</option>
+          <option value="3">Django</option>
+        </optgroup>
+      </select>
+    </form>
+
+    <div>
+      <h2></h2>
+      <p></p>
+    </div>
+
+    <div>
+      <h2></h2>
+      <p></p>
+    </div>
+
+    <div>
+      <h2></h2>
+      <p></p>
+    </div>
+
+    <div>
+      <h2></h2>
+      <p></p>
+    </div>
+
+    <div>
+      <h2></h2>
+      <p></p>
+    </div>
+  </body>
+</html>

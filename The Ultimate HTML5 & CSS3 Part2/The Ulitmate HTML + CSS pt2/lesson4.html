@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        background-color: royalblue;
+        border: 5px solid salmon;
+        margin: 25px;
+      }
+      .one {
+        width: 50%;
+        height: 50px;
+      }
+      .two {
+        width: 25vw;
+        height: 25vh;
+      }
+      .three {
+        width: 20rem;
+        height: 7em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Measurement Units</h1>
+    <br />
+    <h2>Absolute Units</h2>
+    <p>
+      Units that are independent - their size doesnt change <br />
+      Px, ( Inch, Centimetre, Millimetre ) <br />
+      1pixel is 1 pixel, regardless of the size of the screen etc.
+    </p>
+    <h2>Relative Units</h2>
+    <p>
+      Units that are dependant on the size of something else. <br />
+      %, vh, vw, em, rem. <br />
+      width: 50% = X% of the size of the parent element <br />
+      height: 80vh = X% of the size of the Viewport Height <br />
+      Width: 50vw = x% of the size of the viewport width <br />
+      width: 10em = x * the font size of the parent element <br />
+      width: 10rem = x * the font size of the root~(html) element <br />
+    </p>
+
+    <p>
+      by default the font size of the HTML element is 16px, but thats a pain to
+      work with <br />
+      <br />
+      html { <br />
+      font-size:62.5%; <br />
+      } <br />
+      <br />
+      This will take 16px * 62.5% = a new font size of 10px. Easy to work with
+      :)
+    </p>
+    <div class="one">% by px</div>
+    <div class="two">vw by vh</div>
+    <div class="three">rem by em</div>
+  </body>
+</html>

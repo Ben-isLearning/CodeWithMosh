@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Grid</h1>
+    <h2>Parent Properties</h2>
+    <h3>Display:</h3>
+    <p>
+      grid; Generates a grid <br />
+      inline-grid; generates an inline grid
+    </p>
+    <h3>grid template</h3>
+    <p>
+      grid-template-rows: repeat(x, size); (x = amount of rows, Size in px / % /
+      fn ) <br />
+      grid-template-columns: repeat(x, size); (see above) <br />
+      grid-template-areas: "name name name" "name . name" <br />
+      (Name the specific grid area / . = empty grid cell / none = no grid areas
+      defined) <br />
+    </p>
+    <h3>Gap (Effects Items in grid) (Parent property)</h3>
+    <p>
+      column-gap: 20px; (sets gap between col) <br />
+      row-gap: 10px: (sets gap between rows) gap: row col; (Shorthand - set gap
+      for row then col)
+    </p>
+
+    <h3>justify-items: (Effects Items in grid) (Parent property)</h3>
+    <p>
+      Justify grid items along the row Axis <br />
+      justify-items: start; (Items on left)<br />
+      justify-items: end; (items on right)<br />
+      justify-items: center; (items in center)<br />
+      justify-items: stretch; (items all over)<br />
+    </p>
+
+    <h3>align-items: (Effects Items in grid) (Parent property)</h3>
+    <p>
+      Aligns grid items along the column Axis<br />
+      align-items: start; (items on top)<br />
+      align-items: end; (items on bottom)<br />
+      align-items: center; (items in center)<br />
+      align-items: stretch; (items all over)<br />
+      align-items: baseline; (items as they are)<br />
+    </p>
+
+    <h3>
+      align + justify = place-items; (Effects Items in grid) (Parent property)
+    </h3>
+    <p>place-items: (align value) (justify value);</p>
+
+    <h3>justify-content: (Effects actual Grid) (Parent property)</h3>
+    <p>
+      This property aligns the grid along the inline (row) Axis<br />
+      justify-content:start; aligns left<br />
+      justify-content:end; aligns right <br />
+      justify-content:center; aligns in center <br />
+      justify-content:stretch; resizes the grid items fill the full width <br />
+      justify-content:space-around; gives even amount of space between each item
+      (border gets 1/2)<br />
+      justify-content:space-between; gives space between items only (no
+      periphperal space) <br />
+      justify-content:space-evenly; gives even amount of space between each item
+      and the border
+    </p>
+
+    <h3>align-content: (Effects actual Grid) (Parent property)</h3>
+    <p>
+      This property aligns the grid along the block (column) Axis <br />
+      align-content:start; aligns grid to top <br />
+      align-content:end; aligns grid to bottom <br />
+      align-content:center; aligns grid in center <br />
+      align-content:stretch; resizes grid items to fill full height<br />
+      align-content:space-around; even amount of space between each grid item,
+      with half-sized spaces on the far ends<br />
+      align-content:space-between; even amount of space between each grid item,
+      with no space at the far ends<br />
+      align-content:space-evenly; an even amount of space between each grid
+      item, including the far ends<br />
+    </p>
+
+    <h3>place-content: (Effects actual Grid) (Parent property)</h3>
+    <p>Place-content: (align value) (justify value);</p>
+
+    <h2>Child Properties (Finally!)</h2>
+    <p>
+      Grid-row: X / Y; (starting location / Ending location) <br />
+      Grid-column: X / Y; (Starting location / Ending location) <br />
+      grid-area: nameofarea; (No Quotes!)
+    </p>
+    <h2>Example Code</h2>
+    <p>
+      .container { <br />
+      display:grid;<br />
+      grid-template: repeat(3,100px) / repeat(2,100px);<br />
+      grid-template-areas: <br />
+      "header header" <br />
+      "sidebar main"<br />
+      "footer footer";<br />
+      gap: 10px<br />
+      border: 3px solid grey;<br />
+      justify-items: center;<br />
+      align-items: center; <br />
+      justify-content: center;<br />
+      align-content: center;<br />
+      height: 100vh; <br />
+      }<br />
+
+      .item {<br />
+      background: gold; <br />
+      ( grid-column: 1 / span 2; Location by number or name, not both)<br />
+      grid-area: header;<br />
+      }<br />
+    </p>
+  </body>
+</html>

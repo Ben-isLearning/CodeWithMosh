@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background: gold;
+        font-size: 1rem;
+      }
+      .box:hover {
+        border: 2px solid darkblue;
+      }
+
+      #a:hover {
+        transform: perspective(200px) translateZ(100px);
+      }
+      #b:hover {
+        transform: perspective(200px) translateZ(-100px);
+      }
+
+      #c:hover {
+        transform: perspective(200px) rotateY(45deg);
+      }
+
+      #d:hover {
+        transform: perspective(200px) rotateX(45deg);
+      }
+
+      #e:hover {
+        transform: perspective(200px) rotateY(45deg);
+        transform-origin: 0 50%;
+      }
+      #cont {
+        perspective: 200px;
+      }
+      #cont:hover #alpha {
+        transform: rotateX(-45deg);
+      }
+      #cont:hover #beta {
+        transform: rotateX(45deg);
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+  </head>
+  <body>
+    <h1>3D Transformations</h1>
+    Using ~ transform: perspective() | translateZ() | transform-origin() |
+    rotateY() | RotateX() <br />
+    and perspective: <br />
+    perspective() creates a point in 3D space that is X away from the screen,
+    this allows 3D manipulation. <br />
+    perspective: does exactly the same, but is used on containers, rather than
+    items. <br />
+    To acheive 3D transformations - on the Z axis.
+
+    <div id="a" class="box">Translate Z - 100px (forward)</div>
+    <div id="b" class="box">Translate Z - -100px (Back)</div>
+    <div id="c" class="box">
+      Rotate Y - 45deg (Rotate around Center of Y Default)
+    </div>
+    <div id="d" class="box">
+      Rotate X - 45deg (Rotate around Center of X Default)
+    </div>
+    <div id="e" class="box">
+      Rotate Y - 45deg ++ Transform-origin (of rotation) <br />
+      (X value)0 (Y value)50%
+    </div>
+
+    <div id="cont">
+      <div id="alpha" class="box">(Shared perspective)Rotate X - 45deg</div>
+      <div id="beta" class="box">(Shared perspective)Rotate X - 45deg</div>
+    </div>
+  </body>
+</html>

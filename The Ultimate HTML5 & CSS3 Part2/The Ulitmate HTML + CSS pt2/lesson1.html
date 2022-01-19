@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        border: 5px solid black;
+        padding: 30px;
+        width: 60%;
+        height: 80%;
+        align-items: flex-start;
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>The Box Model</h1>
+
+    <p>
+      Each element in HTML a box. Each box is <br />
+      Content, wrapped in Padding, wrapped in Border, wrapped in Margin
+    </p>
+
+    <div>
+      <p>Margin</p>
+      <div>
+        <p>Border</p>
+        <div>
+          <p>Padding</p>
+          <div>
+            <p>Content</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <p>
+      padding: 1, 2, 3, 4; <br />
+      margin: 1, 2, 3, 4; <br />
+      <br />
+      Syntax for both: (top) (right) (bot) (left); <br />
+      or: (top) (sides) (bot); <br />
+      or: (Vertical) (Horizontal);<br />
+      <br />
+      Margin will colapse; 1st(20) + 2nd(20) = 20px <br />
+      Padding won't.
+    </p>
+    <p><a href="index.html"> Take me home!</a></p>
+  </body>
+</html>

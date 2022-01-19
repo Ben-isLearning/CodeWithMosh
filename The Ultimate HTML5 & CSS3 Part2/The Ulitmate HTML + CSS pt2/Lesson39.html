@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form {
+        width: 50%;
+        padding: 2rem;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+  </head>
+  <body>
+    <h1>Grouping Fields / Hiding Fields</h1>
+
+    <div>
+      <h2>Grouping Related Fields</h2>
+      <p>
+        When forms get a little more advanced, we need to group related fields
+        <br />
+        into logical containers. <br />
+        This is acheived by the &lt;fieldset> element. <br />
+        Which requires one &lt;legend> element, and multiple &lt;input>
+        elements. <br />
+        <br />
+        Or this can be acheived by the &lt;section> element. <br />
+        Which requires one &lt;h2> element, and multiple &lt;input> elements.
+      </p>
+    </div>
+
+    <form action="">
+      <legend>Billing Information</legend>
+      <input type="text" />
+      <input type="text" />
+      <input type="text" />
+      <legend>Address Information</legend>
+      <input type="text" />
+      <input type="text" />
+      <input type="text" />
+    </form>
+
+    <div>
+      <h2>Hiding Fields</h2>
+      <p>
+        When the handing Forms, the front-end transfers data to the back-end
+        (Server)
+        <br />
+        But how does the server know what has been changed? <br />
+        Each input has a unique identifier ~ the value="" attribute. <br />
+        Hidden values are used to identify files. <br />
+        <br />
+        for example, <br />
+        Red Sheep (value="123") goes out from the server... <br />
+        Blue Crocodile (value="123") comes back... <br />
+        While the file has undergone drastic changes, <br />
+        it is still the same file as far as the server is concerned
+        (value-"123"). <br />
+        <br />
+
+        Beware: Although these values are hidden to the user; they can still be
+        inspected <br />
+        using the Dev Tools. <br />
+        Never store sesitive data in hidden fields. <br />
+      </p>
+    </div>
+    <form action="">
+      <input type="hidden" name="course-id" value="1234" />
+    </form>
+    <div>
+      <h2></h2>
+      <p></p>
+    </div>
+
+    <div>
+      <h2></h2>
+      <p></p>
+    </div>
+
+    <div>
+      <h2></h2>
+      <p></p>
+    </div>
+
+    <div>
+      <h2></h2>
+      <p></p>
+    </div>
+
+    <div>
+      <h2></h2>
+      <p></p>
+    </div>
+  </body>
+</html>

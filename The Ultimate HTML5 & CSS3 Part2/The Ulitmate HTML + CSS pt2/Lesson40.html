@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form {
+        width: 50%;
+        padding: 2rem;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+  </head>
+  <body>
+    <h1>Data validation + Submitting</h1>
+
+    <div>
+      <h2>Data Validation</h2>
+      <p>
+        Before submitting any form, its critcal to validate the data. <br />
+        Validation ensures that everything behaves as desired. <br />
+        For example, If someone creates an account with an email address as
+        "123123", <br />
+        The website will never be able to send an email to that. <br /><br />
+        Validation covers; <br />
+        Required Fields, Emails, Numbers and Dates. <br />
+        <br />
+        Hackers will supply "invalid" values to see what breaks, then see what
+        breaks to gain access. <br />
+        <br />
+
+        HTML5 elements come with a basic level of validation, however <br />
+        anything truly meaningful is handled by JavaScript (and is out of the
+        scope of this course)<br />
+        <br />
+
+        The <strong>"required"</strong> attribute (Boolean Value) will set an
+        input field to required. <br />
+      </p>
+    </div>
+    <form action="">
+      <input required type="text" name="" id="" />
+      <button type="submit">Submit</button>
+    </form>
+
+    The 'minlength="x" ' attrubute will set <br />
+    the minimum character requirement of the input field. <br />
+    <form action="">
+      <input required minlength="64" type="password" name="" id="" />
+      <button type="submit">Submit</button>
+    </form>
+
+    The 'maxlength="x" ' attribute will set <br />
+    the maximum character allowance of the input field. <br />
+    Input will cease after given value. <br />
+
+    <form action="">
+      <input required maxlength="6" type="password" name="" id="" />
+      <button type="submit">Submit</button>
+    </form>
+
+    the input type="email" attribute comes with its own validation. <br />
+    Which requires an @ within the field. <br />
+    <form action="">
+      <input required minlength="2" maxlength="6" type="email" name="" id="" />
+      <button type="submit">Submit</button>
+    </form>
+
+    the input type="date" attribute comes with its own validation. <br />
+    Which requires a valid date. <br />
+    <form action="">
+      <input required minlength="2" maxlength="16" type="date" name="" id="" />
+      <button type="submit">Submit</button>
+    </form>
+
+    the input type="number" attribute uses two different attributes <br />
+    Rather than min-length="" and max-length="" <br />
+    its simply min="" and max="" <br />
+
+    <form action="">
+      <input required min="0" max="5" type="number" name="" id="" />
+      <button type="submit">Submit</button>
+    </form>
+
+    <div>
+      <h2>Submitting the Form</h2>
+      <p>
+        Submit buttons can be created in two ways; <br />
+        1) &lt;button type="submit">Submit &lt;/button> <br />
+        (Accepts Icon) <br />
+        or <br />
+        2) &lt;input type="submit" value="Submit" &lt;/input> <br />
+        (Only accepts Text) <br />
+      </p>
+    </div>
+
+    <form action="">
+      <input type="text" placeholder="Name Goes Here" />
+      <input type="email" name="" id="" placeholder="Email Goes Here" />
+      <button type="submit">Submit</button>
+      <input type="submit" value="Submit" />
+    </form>
+    <div>
+      <h2>Requirements</h2>
+      <p>
+        the &lt;form> element requires two attributes to fully function. <br />
+        1) <strong>action=""</strong> <br />
+        Which defines where the form goes to be operated upon. <br />
+        Which accepts an absolute or relative url <br />
+        That is acted upon by server-side technology <br />
+        (Node.js / Django / ASP.NET / Laravel / Ruby on Rails / Etc) <br />
+        <br />
+        Formspree have a pretty good service
+        <a href="https://formspree.io">Here</a> to supply a form API
+        <br /><br />
+        2) <strong>method=""</strong> <br />
+        Which defines how we are sending data. <br />
+        method="post" ~ Sends data to server ~ data stored in HTTP Request<br />
+        method="get" ~ Used to request data from server ~ data is stored in URL
+        <br />
+      </p>
+    </div>
+
+    <div>
+      <h2></h2>
+      <p></p>
+    </div>
+  </body>
+</html>

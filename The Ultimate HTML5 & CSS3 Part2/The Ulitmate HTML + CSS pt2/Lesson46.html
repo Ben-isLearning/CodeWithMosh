@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+  </head>
+  <body>
+    <h1>CSS Best Practices</h1>
+    <div>
+      <h2>Follow a Naming Convention - Consistently!</h2>
+      <br />
+      <p>
+        1) Kebab Case - Seperate Multiple words with hypthens. <br />
+        like-this-you-see <br /><br />
+        <strong>
+          2) Camel Case - Starts with a lower case, but each word after is
+          capitalized. <br />
+          camelCaseLooksLikeThis <br />
+        </strong>
+        <br />
+        3) Pascal Case - Starts with capitalization, continues. <br />
+        PascalCaseLooksLikeThis <br /><br />
+
+        4) Underscore Case - seperate words with _ <br />
+        looks_like_this_takes_ages_to_type <br /><br />
+      </p>
+    </div>
+
+    <div>
+      <h2>Create Logical Sections in Stylesheet</h2>
+      <p>
+        Even for large projects, split Style Sheets into multiples and access
+        them via SASS <br /><br />
+        1) Basic Styles <br />
+        Setting incredibly broad rules... *{} | html{} | body{} | box-sizing:
+        <br />
+        <br />
+
+        2) Typography <br />
+        Setting styles for h1 - h6 <br /><br />
+
+        3) Forms <br />
+        Setting styles for input fields <br /><br />
+
+        4) Navigation Bar <br />
+        Setting styles for Nav bars <br /><br />
+
+        Cluster sections together with appropreate notes. <br />
+        Ideally we will be able to copy and paste <br />
+        Line A - B of HTML and line X - Y of CSS and have it behave as expected.
+        <br />
+      </p>
+    </div>
+    <div>
+      <h2>Avoid Overspecific Selectors</h2>
+      <p>
+        <strong>div.nav > ul.items > li {} </strong>(Specificity 23)<br />
+        Is an incredibly specific selector, which is incredibly hard to
+        maintain. <br />
+        And will certainly break with changes. <br />
+        <br />
+        *Avoid child selectors where we can* <br />
+        *Avoid type of elements* <br />
+        *Create meaningful classes* <br />
+
+        By removing the structural and relationship aspects, and creating a
+        meaningful class, <br />
+        The above code can become; <br />
+        <br />
+        <strong>.nav-item{}</strong> (Specificity 10) <br />
+      </p>
+    </div>
+
+    <div>
+      <h2>Avoid !important</h2>
+      <p>
+        If we need to use !important to make something work as intended, <br />
+        We've broken something elsewhere by making it too specific. <br />
+      </p>
+    </div>
+
+    <div>
+      <h2>Sort Lines Ascending</h2>
+      <p>
+        Highlight CSS Codeblock <br />
+        Crtl + Shift + P >> Sort Lines Ascending <br />
+        <br />
+        Take advantage of Style inheritance. <br />
+        Style an upper element, and let the style cascade through the children
+        <br />
+        <br />
+        Extract Repetitive Patterns <br />
+        Object Oriented CSS <br />
+        <br />
+        Avoid Repetitive Values (Keep it DRY) <br />
+        Dont Repeat Yourself. <br />
+      </p>
+    </div>
+  </body>
+</html>

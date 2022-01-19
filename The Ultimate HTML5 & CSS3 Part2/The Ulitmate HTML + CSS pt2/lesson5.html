@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        border: 10px solid crimson;
+        height: 10rem;
+        width: 10rem;
+      }
+      .two {
+        position: relative;
+        left: 20rem;
+      }
+      .three {
+        position: absolute;
+        left: 20rem;
+      }
+      .four {
+        position: fixed;
+        right: 30rem;
+        top: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Positioning</h1>
+    <h2>Position: relative;</h2>
+    <p>Position an element relative to its normal position</p>
+    <div class="one">Normal</div>
+    <div class="two">
+      Position: Relative; left:20rem; <br />
+      Has moved from where it was, to where it is.
+    </div>
+
+    <h2>Position: absolute;</h2>
+    <p>Position an element relative to the parent element</p>
+    <div class="one">Normal</div>
+    <div class="three">
+      Position: Absolute; Has moved from where it was, to where it is (Sucked
+      out of DOM + Placed on another layer). <br />
+      Thats why the Position:fixed; is squished up
+    </div>
+
+    <h2>Position: Fixed;</h2>
+    <p>Position an element relative to the viewport</p>
+    <div class="one">Normal</div>
+    <div class="four">
+      Position:Fixed; Has moved from where it was, to where it is.
+    </div>
+  </body>
+</html>

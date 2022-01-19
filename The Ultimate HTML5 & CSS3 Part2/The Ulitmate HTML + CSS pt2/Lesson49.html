@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form {
+        width: 50%;
+        padding: 2rem;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+  </head>
+  <body>
+    <h1>BEM</h1>
+    <div>
+      <h2>Block Element Modifier</h2>
+      <p>
+        Think of our webpage as a collection of blocks / components. <br />
+        These blocks contain other blocks can contain elements, and can be
+        modified. <br />
+        <br />
+        <strong
+          >Naming convention for BEM <br />
+          class="parent__element"</strong
+        >
+        <br />
+        To seperate a Block from an Element <br />
+        **Only applies to dependant blocks / information** <br />
+        <strong>class="element--modifier"</strong> <br />
+        to seperate a Block from a modifier <br />
+        **Only applies to a main Blocks**
+
+        <br />
+        <br />
+        A div (refered to as a "card") that contains an entire selfcontained
+        item <br />
+        For example, picking a subscription from A B or C. <br />
+        each div ("card") contains <br />
+        Headers, Price, Billing Cycle, description, List, Button, Badge etc.
+        <br />
+        But all of the contained information only make sence within the context
+        <br />
+        of the div ("card").. <br />
+        Like an abstract pricetag wouldnt make any sence <br />
+      </p>
+    </div>
+  </body>
+</html>

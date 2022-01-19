@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style> 
+    div {
+        border: 3px solid grey;
+        margin: 20px;
+    }
+    .img {
+ border: 3px solid black;
+ float: left;
+    }
+
+    .img1 {
+ border: 3px solid black;
+ float: right;
+    }
+
+.img::after{
+    content:'';
+    display:block;
+    clear:both;
+    }
+
+    </style>
+  </head>
+  <body>
+    <h1>Floating Elements</h1>
+    <p>
+      The float property is used for positioning and formatting content e.g. let
+      an image float left to the text in a container. <br />
+      But float: messes with things, and <strong>clear:</strong> fixes it. 
+      <strong>float:</strong> can be <strong>right;</strong> or
+      <strong>left;</strong> <br>
+      <div> <div class="img">Pretend its an image </div>
+          <p>     float: left; | ::after clear: both; Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, quasi?</p>
+        
+      </div>
+      <div> <div class="img1">Pretend its an image </div>
+        <p>   float:right | ::afterclear: both; Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, quasi?</p>
+    </div>
+    </p>
+    <p> Legacy - Don't use  </p>
+  </body>
+</html>

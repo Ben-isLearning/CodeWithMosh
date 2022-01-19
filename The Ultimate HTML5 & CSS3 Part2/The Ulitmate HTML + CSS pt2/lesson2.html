@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .div {
+        height: 100px;
+        width: 100px;
+        padding: 20px;
+        border: 10px;
+        background-color: red;
+        margin: 10px;
+        box-sizing: border-box;
+      }
+      .dov {
+        box-sizing: content-box;
+        height: 100px;
+        width: 100px;
+        padding: 20px;
+        border: 10px;
+        background-color: red;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Sizing Elements</h1>
+    <p>
+      Elements can be sized by the <strong>height:</strong> and
+      <strong>width:</strong> properties <br />
+      <br />
+      Only block level element respect these properties <br />
+      inline elements can be taught respect by adding
+      <strong>display:inline-block;</strong> <br />
+      <br />
+      There are two types of <strong>box-sizing:</strong> <br />
+      <strong> content-box;</strong> and <strong> border-box;</strong> <br />
+      <strong> Content-box;</strong> Only cares about the height / width of the
+      content, padding and border values are added ontop <br />
+      <strong> Border-box;</strong> Cares about it it all.
+    </p>
+    <div class="div">Border Box (100x100)</div>
+
+    <div class="dov">Content Box (100x100)</div>
+    <br />
+    <p>
+      These two are vastly different. To prevent boxes being mismatched style
+      all boxes to be the same. <br />
+      Set a rule for all elements, all psuedo before and all psuedo after
+      elements too. <br />
+      <br />
+
+      * <br />
+      *::before <br />*::after { <br />box-sizing:borderbox <br />}
+    </p>
+  </body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+        flex-direction: column;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background: gold;
+        font-size: 1rem;
+      }
+
+      .animation-bloom {
+        animation-name: bloom;
+        animation-duration: 6s;
+        animation-timing-function: linear;
+      }
+
+      @keyframes bloom {
+        0% {
+          transform: scale(1);
+        }
+        25% {
+          transform: scale(1.5);
+        }
+        50% {
+          transform: scale(2);
+        }
+        55% {
+          background-color: red;
+          transform: translate(10px, 10px);
+        }
+        60% {
+          transform: scale(2);
+
+          background-color: red;
+        }
+        70% {
+          transform: scale(-8);
+
+          background-color: red;
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+  </head>
+  <body>
+    <h1>Animations</h1>
+    Animations are a little like JavaScript Methods. <br />
+    They need to be created, then called. <br />
+    Animations are created with the @keyframes function. <br />
+    Animations need a name - Whatever you like <br />
+    Then animations need a set of instructions <br />
+    0% {do X} ...... 100% {do X} <br />
+    <br />
+    Then after its been created, we can call the @keyframe with two properties
+    <br />
+    animation-name: and animation-duration: <br />
+    (We need both of these for the animation to function) <br />
+
+    We can add additional rules with <br />
+    animation-delay: Xs ~ To delay the animation by however many seconds <br />
+    animation-iteration-count: X~ To set amount of loops <br />
+    animation-timing-function: Keyword ~ to set timing style of animation
+    <br />
+    animation-direction: Keyword ~ to set animation to play forward, or reverse
+    etc <br />
+    <br />
+    or Shorthand animation:
+    <br />
+    <div id="animate" class="box animation-bloom"></div>
+    <br />
+    <h2>Re-usability</h2>
+    Once we have created an animation, we can set up a dedicated class for it.
+    <br />
+    for instance "animation-NAME" is a good practice. <br />
+    Now instead of the animation being hard-coded into a particular element,
+    <br />
+    it exists all by its self. <br />
+    <br />
+    .box {<br />
+    width: 100px;<br />
+    height: 100px;<br />
+    background: gold;<br />
+    font-size: 1rem;<br />
+    }<br />
+    <br />
+
+    .animation-bloom {<br />
+    animation-name: bloom;<br />
+    animation-duration: 6s;<br />
+    animation-timing-function: linear;<br />
+    }<br />
+    <br /><br />
+    vs
+    <br /><br />
+    .box {<br />
+    width: 100px;<br />
+    height: 100px;<br />
+    background: gold;<br />
+    font-size: 1rem;<br />
+    animation-name: bloom;<br />
+    animation-duration: 6s;<br />
+    animation-timing-function: linear;<br />
+    }<br />
+  </body>
+</html>

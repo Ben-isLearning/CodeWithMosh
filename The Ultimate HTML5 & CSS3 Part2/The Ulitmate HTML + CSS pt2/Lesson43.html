@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+        flex-direction: column;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background: gold;
+        font-size: 1rem;
+        transition: transform 0.5s, background 0.5s;
+        overflow: hidden;
+      }
+
+      #a:hover {
+        transform: rotate(45deg);
+        background: salmon;
+      }
+      #b:hover {
+        transform: rotate(-45deg);
+        background: seagreen;
+      }
+
+      #c {
+        font-size: 0.8rem;
+      }
+      #c:hover {
+        transform: scale(2);
+        background: skyblue;
+        color: skyblue;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+  </head>
+  <body>
+    <h1>Transitions</h1>
+    Irl, items don't magically go from A to B, they transition. <br />
+    This is acheived using the transition: <br />
+    We need to specify; <br />
+    what is transitioning <br />
+    a timeframe <br />
+    a Line - keyword linear | ease-in | ease-out | cubic-bezier() <br />
+    a Delay time <br />
+    Can transition multiple properties.
+
+    <a target="_blank" href="https://cubic-bezier.com/#.17,.67,.83,.67"
+      >Cubic-What???</a
+    >
+    <br /><br />
+
+    <div id="a" class="box">Rotate 45deg / transform 0.5s;</div>
+    <div id="b" class="box">Same but backwards</div>
+    <div id="c" class="box">
+      <strong>Hover to zoom;</strong> Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Magni, architecto? Lorem ipsum dolor sit amet,
+      consectetur adipisicing elit. Debitis, eius
+    </div>
+  </body>
+</html>

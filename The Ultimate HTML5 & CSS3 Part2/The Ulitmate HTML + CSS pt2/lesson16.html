@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .two {
+        text-align: center;
+        text-indent: 250px;
+      }
+      .three {
+        text-align: right;
+        text-decoration: underline;
+      }
+
+      p:nth-child(4) {
+        text-transform: capitalize;
+      }
+      p:nth-child(5) {
+        text-transform: uppercase;
+      }
+
+      p:nth-child(9) {
+        direction: rtl;
+      }
+
+      p:nth-child(10) {
+        column-count: 4;
+        column-gap: 2rem;
+        column-rule: 2px dotted dodgerblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Formatting Text</h2>
+    <p>
+      <strong>text-align:</strong> is used to control the alignment of text
+      <br />
+      <strong> left; right; center;</strong>
+    </p>
+    <p class="two">
+      <strong>text-indent:</strong> is used to add indentation on the first line
+      of text <br />
+      <strong> 1rem; 2rem; etc</strong>
+    </p>
+    <p class="three">
+      <strong>text-decoration:</strong> is used to add fancy bits to text <br />
+      <strong>underline; line-through; </strong>
+    </p>
+    <p>
+      <strong>text-transform:</strong> is used to transform text entirely <br />
+      <strong>lowercase; uppercase; capitalize;</strong>
+    </p>
+    <p>
+      <strong>column-count:</strong> is used to set number of columns text
+      should be presented in <br />
+      <strong>1; 2; 3; etc</strong>
+    </p>
+    <p>
+      <strong>column-gap:</strong> is used to set gap between columns of text
+      <br />
+      <strong>2rem; 4rem; etc</strong>
+    </p>
+    <p>
+      <strong>column-rule:</strong> is used to create a ruled line between
+      columns of text <br />
+      <strong>width style colour; 4px dotted grey; </strong>
+    </p>
+    <p>
+      <strong>direction:</strong> is used to set the direction text <br />
+      <strong>ltr; rtl; </strong>
+    </p>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil nobis
+      obcaecati itaque fugiat officia nisi omnis inventore velit quisquam sint
+      quasi, quae iure numquam assumenda ut cumque, necessitatibus maxime iusto,
+      at eum ipsam neque recusandae? Accusamus rerum ut quisquam perspiciatis!
+    </p>
+  </body>
+</html>

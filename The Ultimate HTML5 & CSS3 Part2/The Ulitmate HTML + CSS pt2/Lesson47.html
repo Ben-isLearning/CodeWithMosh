@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        --background-color: seagreen;
+      }
+
+      .a,
+      .b {
+        height:100px; 
+        width:100px;
+        background-color: var(--background-color);
+      }
+
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+  </head>
+  <body>
+    <h1>Variables / Custom Properties</h1>
+    <div>
+      <h2></h2>
+      <p>
+        Instead of repeating the same line of code, over and over again. <br />
+        create a custom class <br />
+        Custom classes are created in the root, by :root{} <br />
+        custom classes begin with -- but are named however you see fit. <br />
+        <br />
+        :root { <br />
+        --colorPrimary: red;<br />
+        --border-size: 2px; <br />
+        --border-radius: 10px; <br />
+        } <br /><br />
+        The custom properties will be set at the same level as HTML, <br />
+        and will be inherited by EVERYTHING on the DOM. <br /><br />
+        These customer properties need to be called by the var(); <br /><br />
+        .one { <br />
+        background: var(--colorPrimary); <br />
+        } <br />
+        <br />
+        <div class="a"></div> <br>
+        <div class="b"></div>
+      </p>
+    </div>
+  </body>
+</html>

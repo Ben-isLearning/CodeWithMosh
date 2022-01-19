@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style/stylesheet.css" />
+    <style>
+      .one {
+        font-family: "opensans";
+      }
+      .two {
+        font-family: monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Embedded Web Fonts</h2>
+    <p class="two">
+      Fonts from the web! <br />
+      Go to... <br />
+      <a target="_blank" href="https://fontsquirrel.com">Font Squirrel</a>
+      <br />
+      <br />
+      Download a font for free! <br />
+      The download will most likely be in a .ttf format - Which is fine <br />
+      But the filetype is far too big to use on a website <br />
+      Convert that sucker! Using the "Generator" tab of Font squirrel <br />
+      Now we have lovely .woff and .woff2 text files. <br />
+      Now Extract and "install" (Move the files) into a new folder within the
+      font directory. <br />
+      Now install the .CSS file that came with the files <br />
+      Now copy the @font-face declarations into the very TOP of our projects CSS
+      file
+      <br />
+      The font-family: "xxx"; declaration names the font family; It can be
+      renamed. <br />
+      Ammend the SRC urls inside the CSS <br />
+      Ammend the font-weight on the bold fonts + the font-style on the italic
+      fonts. <br />
+    </p>
+    <p class="one">
+      Now the new font has been installed, we're ready to use it as normal
+      <br />
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse voluptate
+      nisi hic aperiam cupiditate architecto itaque at veniam quas perspiciatis.
+    </p>
+
+    <p>
+      ++ Flash of Unstyled font <br />
+      When users have trash connection ~ it'll take a hot second or two before
+      the styling loads <br />
+      to overcome anything going sideways while this occurs <br />
+      Add the property; <strong>font-display:fallback;</strong> to the
+      @font-face declarations. <br />
+      (or <strong>font-display:optional;</strong>) If the custom-font does not
+      download in a timely manner - it is forgotten about.
+    </p>
+  </body>
+</html>

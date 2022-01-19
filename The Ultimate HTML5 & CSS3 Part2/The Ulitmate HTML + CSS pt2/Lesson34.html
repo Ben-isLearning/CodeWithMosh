@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form {
+        width: 50%;
+        padding: 2rem;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+  </head>
+  <body>
+    <h1>Input Controls: Text Feilds</h1>
+
+    <div>
+      <h2>Input Attributes</h2>
+      <p>
+        the input element takes various attributes <br />
+        value="" ~ Can be used to pre-populate an input field. <br />
+        placeholder="" ~ Can be used to pre-populate an input feild with
+        shadow-text that dissapears <br />
+        readonly ~ User is not allowed to change the value within. (Value sent
+        to server) <br />
+        disabled ~ User is unable to even select the input field. (Value not
+        sent) <br />
+        maxlength="" ~ Sets a maximum character length - Used for validation
+        <br />
+        autofocus ~ On pageload, element with this attribute automatically gets
+        focused <br />
+      </p>
+    </div>
+    <div>
+      <h2>Capture Text;</h2>
+      <p>
+        to capture text, ensure that input is type="text" <br />
+        This will ensure that a standard keyboard is shown on mobile too <br />
+      </p>
+    </div>
+    <form>
+      <input type="text" placeholder="I like sausages" />
+    </form>
+
+    <div>
+      <h2>Capture More than default;</h2>
+      <p>
+        To capture more input that the default allows, use the &lt;textarea>
+        element. <br />
+        The resize is enabled by default, we can override that with CSS <br />
+        <strong>resize: none;</strong> <br />
+        <br />
+        This element will allow us to set name="" id="" cols="" rows="" <br />
+        cols="" and rows="" take a character value, <br />
+        as such 30 cols and 10 rows = 300 characters.
+      </p>
+    </div>
+    <form>
+      <input type="text" />
+      <textarea name="" id="" cols="30" rows="10"></textarea>
+    </form>
+
+    <div>
+      <h2>Capture Number;</h2>
+      <p>
+        To capture numbers, ensure that input is type="number" <br />
+        This will not accept any keystrokes from A-Z characters, only numbers!
+        <br />
+        This will ensure that a number pad is shown on mobile too
+      </p>
+    </div>
+    <form>
+      <input type="number" />
+    </form>
+
+    <div>
+      <h2>Capture Password;</h2>
+      <p>
+        To capture passwords, ensure that input is type="password" <br />
+        This ensures that instead of showing characters, black dots are shown.
+      </p>
+    </div>
+    <form>
+      <input type="password" />
+    </form>
+
+    <div>
+      <h2>Capture Date;</h2>
+      <p>
+        To capture dates, ensure that input is type="date" <br />
+        This ensures that a calendar function is attatched to the input field.
+      </p>
+    </div>
+    <form>
+      <input type="date" />
+    </form>
+
+    <div>
+      <h2>Capture Email;</h2>
+      <p>
+        To capture dates, ensure that input is type="email" <br />
+        This ensures that an email function is attatched to the input field.
+        <br />
+        This also performs basic validation, so the user has to type a 'valid'
+        email address. <br />
+      </p>
+    </div>
+    <form>
+      <input type="email" />
+    </form>
+  </body>
+</html>

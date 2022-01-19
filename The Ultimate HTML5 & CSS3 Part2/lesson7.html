@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 100vh;
+        width: 80vw;
+        flex: 1 1 10rem;
+      }
+      .container {
+        border: 3px solid grey;
+      }
+      .box {
+        height: 5rem;
+        width: 5rem;
+        margin: 1rem;
+        background-color: crimson;
+      }
+      .container1 {
+        border: 3px solid grey;
+        display: flex;
+      }
+      .container2 {
+        border: 3px solid grey;
+        display: flex;
+        flex-direction: row-reverse;
+      }
+      .container3 {
+        border: 3px solid grey;
+        display: flex;
+        flex-direction: column;
+      }
+      .container4 {
+        border: 3px solid grey;
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Flexbox</h1>
+    <h2>Classic</h2>
+    <div class="container">
+      <p>Main Axis / Cross Axis</p>
+
+      <p>ROW: Main = X axis | Cross = Y Axis</p>
+
+      <p>COL: Main = Y axis | Cross = X Axis</p>
+
+      <p>
+        <strong>justify-content: </strong>(Move content across Main Axis) <br />
+        flex-start; (Default) <br />
+        flex-end; (End of Axis) <br />
+        center; (Center of axis) <br />
+        space-evenly; (Seperate Evenly) <br />
+        space-between; (Pushed to edge, lots of space between) <br />
+        space-around; (1/2 space on edge. full space in middle)
+      </p>
+      <p>
+        <strong>align-items:</strong> (Move content across Cross Axis <br />
+        flex-start; (Default) <br />
+        flex-end; (End of Axis) <br />
+        center; (center of Axis) <br />
+        baseline; () <br />
+      </p>
+      <p>
+        <strong>Flex-wrap:</strong> (If content is too large, it wraps onto next
+        line (or not)) wrap; (enables wrapping) <br />
+        nowrap; (disables)
+      </p>
+      <p>
+        <strong>align-content:</strong> (align multiple lines of content) <br />
+        flex-start; (Default) <br />
+        flex-end; (End of Axis) <br />
+        center; (Center of axis) <br />
+        space-between; (Pushed to edge, lots of space between) <br />
+        space-around; (1/2 space on edge. full space in middle)
+      </p>
+      <p>
+        <strong>align-self:</strong> (align single flex-item that overrides
+        align-items) <br />
+        flex-start; (Default) <br />
+        flex-end; (End of Axis) <br />
+        center; (Center of axis) <br />
+        auto; (automatically) <br />
+        baseline; ()
+      </p>
+      <p>
+          <h2> Flex Item Properties</h2>
+        <strong>flex-basis:</strong> Sets initial size of a flex item (Row=Width / Col=Height) <br />
+        <strong>flex-grow:</strong> Sets growth factor (0 = disabled / 1 = enabled / 2 = grow factor 2)<br />
+        <strong>flex-shrink:</strong>Sets shrink factor (0 = disabled / 1 = enabled / 2 = shrink factor 2)<br />
+        shorthand <strong>flex:</strong> Does it all! (value 1 = grow / value 2 = shrink or basis / Value 3 = basis)
+      </p>
+    </div>
+    <h2>Flexible ~ Display:Flex | (default Flex-direction:Row;)</h2>
+    <div class="container1">
+      <div class="box">a</div>
+
+      <div class="box">b</div>
+
+      <div class="box">c</div>
+    </div>
+    <h2>Flexible ~ Display:Flex | flex-direction: row-reverse;</h2>
+    <div class="container2">
+      <div class="box">a</div>
+
+      <div class="box">b</div>
+
+      <div class="box">c</div>
+    </div>
+    <h2>
+      Flexible ~ Display:Flex | flex-direction: column; | align-self: start /
+      center / flex-end
+    </h2>
+    <div class="container3">
+      <div style="align-self: flex-start" class="box">a</div>
+
+      <div style="align-self: center" class="box">b</div>
+
+      <div style="align-self: flex-end" class="box">c</div>
+    </div>
+    <h2>Flexible ~ Display:Flex; | flex-direction: column-reverse;</h2>
+    <div class="container4">
+      <div class="box">a</div>
+
+      <div class="box">b</div>
+
+      <div class="box">c</div>
+    </div>
+  </body>
+</html>
