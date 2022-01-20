@@ -17,21 +17,38 @@
         font-family: "Prompt", sans-serif;
       }
 
-      /* CSS Added to Main */
+      /* CSS Copied from style.css - Ensures this page works stand-alone */
+      a {
+        text-decoration: none;
+      }
+
+      .link-arrow {
+        color: var(--color-accent);
+        text-transform: uppercase;
+        font-size: 2rem;
+        font-weight: bold;
+      }
+      .link-arrow::after {
+        content: "-->";
+        margin-left: 5px;
+        transition: margin 0.15s;
+      }
+
+      .link-arrow:hover::after {
+        margin-left: 10px;
+      }
+
+      @media screen and (min-width: 1024px) {
+        .link-arrow {
+          font-size: 1.5rem;
+        }
+      }
     </style>
   </head>
   <body>
     <h1>Adding Link Component</h1>
-
-    <p>
-      Inspect the design sheet... <br />
-      Link content ~ "Learn More" <br />
-      Link color - Accent <br />
-      Link Decoration - None <br />
-    </p>
-    <br /><br />
-
-    <p>Before:</p>
+    <br />
+    <p>(Defaults bleed in from styles.css) Before:</p>
     <div>
       <a href="#">Learn More</a>
     </div>
