@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,400;0,800;1,200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Project/css/style.css" />
+    <style>
+      * {
+        font-family: "Prompt", sans-serif;
+      }
+
+      /* CSS Added to Main */
+    </style>
+  </head>
+  <body>
+    <h1>Adding Link Component</h1>
+
+    <p>
+      Inspect the design sheet... <br />
+      Link content ~ "Learn More" <br />
+      Link color - Accent <br />
+      Link Decoration - None <br />
+    </p>
+    <br /><br />
+
+    <p>Before:</p>
+    <div>
+      <a href="#">Learn More</a>
+    </div>
+    <br /><br />
+    <p>After;</p>
+    <div>
+      <a href="#" class="link-arrow"> Learn More</a>
+    </div>
+    <br /><br />
+    <div>
+      <p>
+        Pre; <br />
+        Step 0: @ a Element - remove / text-decoration <br /><br />
+        Styling class <br />
+        Step 1; Direct class - color: var(--color-accent); <br />
+        Step 2: Direct class - text-transform: uppercase; <br />
+        Step 3: Direct class - font-size: 2rem; (Same as mobile) <br />
+        Step 4: Direct class - font-weight: bold; <br />
+        <br />
+        Styling what follows <br />
+        Step 5: Direct Class::after - content: '-->' <br />
+        Step 6; Direct Class::after - margin-left: 5px; <br />
+        Styling hover effects <br />
+        <br />
+        Step 7: Direct Class:hover::after - margin-left: 10px; <br />
+        Takes action on the ::after part, when :hover is engaged. <br />
+        Step 8: Direct Class::after - transition: margin 0.15s; <br />
+        Sets the transition to "margin" property, to take 0.15s.. (Goes from 5px
+        to 10px) Dynamic / Resonsive <br />
+        <br />
+        Step 9: Create new media query with @media. <br />
+        @media is the exception to DRY. <br />
+        Its important to keep code 'villages' together! <br />
+        For instancesetting rule for a related component <br />
+        like 100 lines away is just bonkers. <br />
+      </p>
+    </div>
+
+    <div>
+      <h2></h2>
+      <p></p>
+    </div>
+
+    <div>
+      <h2></h2>
+      <p></p>
+    </div>
+  </body>
+</html>
