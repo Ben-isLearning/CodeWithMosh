@@ -166,10 +166,6 @@ it will bleed into other rules. */
   height: 40px;
 }
 
-.icon--primary {
-  color: var(--color-primary);
-}
-
 .icon-container {
   display: inline-flex;
   justify-content: center;
@@ -178,4 +174,12 @@ it will bleed into other rules. */
   width: 64px;
   height: 64px;
   border-radius: 100%;
+}
+
+.icon--primary {
+  fill: var(--color-primary);
+}
+
+.icon--secondary {
+  fill: var(--color-secondary);
 }
