@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,400;0,800;1,200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Project/css/style.css" />
+    <title>Document</title>
+
+    <style>
+      /* Copied from style.css so this page functions as a standalone */
+      /* Amended Image location */ 
+      /* Lists */
+
+.list {
+  list-style: none;
+  padding-left: 0;
+  color: var(--color-heading);
+}
+
+.list--inline .list__item {
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+.list--tick {
+  list-style-image: url(/Project/images/tick.svg);
+  padding-left: 3rem;
+}
+
+/*Usually Avoid nesting - however 
+if we target just .list__item, 
+it will bleed into other rules. */
+
+.list--tick .list__item {
+  padding-left: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .list--tick .list__item {
+    padding-left: 0;
+  }
+}
+    </style>
+  </head>
+
+  <body>
+    <h1>Lists</h1>
+    <p>
+      Inspecting the design sheet... <br />
+      We need... <br />
+      Horizontal lists w/o decoration <br />
+      Vertcal lists with ticks <br />
+      Links in navbar + footer
+      Use BEM convention to seperate a parent and child with __ <br>
+      class="list" - to target the whole list <br>
+      and class="list__item" - to target the item inside a list. <br>
+      list__item cant exist alone, it needs to be in its parent. <br>
+
+      <br />
+      Stage 1) - Foundation Class <br />
+      Set up Generic class to establish groundwork <br /><br />
+      .list { <br />
+      list-style: none;  -- Remove Dots<br />
+      padding-left: 0;  -- Remove padding on left side<br />
+      color: var(--color-heading); -- amend color  <br />
+      } <br />
+      Stage 2) - Directional Class<br>
+      Create class that targets .list__item within .list--inline <br>
+      .list--inline .list__item { <br>
+        display: inline-block; <br>
+        padding-right: 2rem; <br>
+      } <br>
+      <br>
+      Stage 3) - Display Variant Class <br>
+      Create class that uses a specific image as the list-style <br>
+      .list--tick { <br>
+        list-style-image: url(../images/tick.svg); <br>
+      } <br>
+      Stage 4) - Media Query <br>
+      Create a media queryto give interactivity. <br>
+      (added to stage 3)
+      <br>
+
+      Before; <br>
+      <ul>
+        <li>Ola</li>
+        <li>Soy</li>
+        <li>Bocadillo</li>
+      </ul>
+      <br />
+
+      Stage 1; <br>
+      <ul class="list">
+        <li class="list__item">Ola</li>
+        <li class="list__item">Soy</li>
+        <li class="list__item">Bocadillo</li>
+      </ul>
+      <br>
+      Stage 2; 
+      <ul class="list list--inline">
+        <li class="list__item">Ola</li>
+        <li class="list__item">Soy</li>
+        <li class="list__item">Bocadillo</li>
+      </ul>
+      <br>
+      Stage 3; 
+      <ul class="list list--tick">
+        <li class="list__item">Ola</li>
+        <li class="list__item">Soy</li>
+        <li class="list__item">Bocadillo</li>
+      </ul>
+    </p>
+    <div>
+      <h2></h2>
+      <p></p>
+    </div>
+  </body>
+</html>
