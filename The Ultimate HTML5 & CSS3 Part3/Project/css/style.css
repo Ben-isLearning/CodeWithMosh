@@ -286,6 +286,9 @@ it will bleed into other rules. */
   margin: 4px;
 }
 
+.input-shadow {
+  box-shadow: 0 0 10px grey;
+}
 @media screen and (min-width: 1024px) {
   input {
     font-size: 1.5rem;
