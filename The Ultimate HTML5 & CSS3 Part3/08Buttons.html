@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,400;0,800;1,200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Project/css/style.css" />
+    <title>Document</title>
+
+    <style>
+      /* Copied from style.css so this page functions as a standalone */
+      /* Buttons */
+
+.btn {
+  border-radius: 40px;
+  border: 0;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  padding: 2rem 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.btn--primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+.btn--primary:hover {
+  background-color: #56ea20;
+  color: white;
+}
+
+.btn--secondary {
+  background-color: var(--color-secondary);
+  color: white;
+}
+.btn--secondary:hover {
+  background-color: #5dff62;
+  color: white;
+}
+
+.btn--accent {
+  background-color: var(--color-accent);
+  color: white;
+}
+
+.btn--accent:hover {
+  background-color: #946d17;
+  color: white;
+}
+
+.btn--block {
+  display: inline-block;
+  width: 100%;
+}
+
+.btn--outline {
+  background-color: #fff;
+  color: var(--color-heading);
+  border: 2px solid var(--color-heading);
+}
+
+.btn--outline:hover {
+  background-color: var(--color-heading);
+  color: #fff;
+}
+
+@media screen and (min-width: 1024px) {
+  .btn {
+    font-size: 1.5rem;
+  }
+}
+
+    </style>
+  </head>
+
+  <body>
+    <h1>Buttons</h1>
+
+    <p>
+      Inspect Design sheet... <br />
+      Need.. <br />
+      large / Accent button <br />
+      large / Outline button <br />
+      Streached button / fit content Streasched button / 100% of avaliable space
+      (Block Button) <br />
+      hover button large / secondary color
+    </p>
+    <div>
+      Step 1) Foundation class - btn <br />
+      Step 2) Skin Class - btn--primary /btn--secondary / btn--accent <br />
+      Step 3) Check if functional inside of an a tag. <br />
+      Step 4) Make buttons 'look' clickable cursor: pointer <br />
+      Step 5) Remove wrapping~ white-space:nowrap; <br />
+      Step 6) Create hover functionality, to lighten buttons on hover. <br />
+      Sass is best practice | Code variables in root | hard-code each line
+      <br />
+      Step 7) Create Block buttons to span 100% of the space. <br>
+      Step 8) Amend border-box: to stop buttons exceeding the page <br>
+      Step 9) add margin <br> 
+      step 10) Add Adaptability with @media. <br>
+      Step 11) Remember the outline buttons... <br>
+      Step 12) Create class for outline - White background Text color 1 + Border color 1; <br>
+      Step 13) Create hover class for outline <br>
+      <br />
+      <br />
+
+      <p>
+        Before; <br />
+        <button>Buy Now</button>
+        <br />
+        Stage 1 <br />
+        <button class="btn">Buy now</button>
+        <br />
+        Stage 2 <br />
+        <button class="btn btn--primary">Buy now</button>
+        <button class="btn btn--secondary">Buy now</button>
+        <button class="btn btn--accent">Buy now</button>
+        <br />
+        Stage 3 / 4 / 5 / 6 /<br />
+        <br />
+        <a href="#" class="btn btn--primary">Buy Now</a>
+        <a href="#" class="btn btn--secondary">Buy Now</a>
+        <a href="#" class="btn btn--accent">Buy Now</a>
+        <br> <br>
+        Stage 7 <br>
+        <div>
+          <a href="#" class="btn btn--primary btn--block">Buy Now</a>
+          <a href="#" class="btn btn--secondary btn--block">Buy Now</a>
+          <a href="#" class="btn btn--accent btn--block">Buy Now</a>
+          <br>
+          <br>
+          Stage 11 / 12 <br> <br>
+          <a href="#" class="btn btn--outline">Buy Now</a>
+          <br>
+          <br>
+        </div>
+      </p>
+    </div>
+<br><br>
+<p>Dump of test lines.</p>
+    <button class="btn">Buy now</button>
+
+<button class="btn btn--primary">Buy now</button>
+<button class="btn btn--secondary">Buy now</button>
+<button class="btn btn--accent">Buy now</button>
+
+<a href="#" class="btn btn--primary">Buy Now</a>
+<a href="#" class="btn btn--secondary">Buy Now</a>
+<a href="#" class="btn btn--accent">Buy Now</a>
+
+<button class="btn btn--primary btn--block">Buy now</button>
+<button class="btn btn--secondary btn--block">Buy now</button>
+<button class="btn btn--accent btn--block">Buy now</button>
+
+<a href="#" class="btn btn--primary btn--block">Buy Now</a>
+<a href="#" class="btn btn--secondary btn--block">Buy Now</a>
+<a href="#" class="btn btn--accent btn--block">Buy Now</a>
+
+<button class="btn btn--outline">Buy Now</button>
+
+<a href="#" class="btn btn--outline">Buy Now</a>
+
+<button class="btn btn--outline btn-block">Buy Now</button>
+
+<a href="#" class="btn btn--outline btn-block">Buy Now</a>
+
+  </body>
+</html>
