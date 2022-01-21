@@ -15,6 +15,28 @@
 
     <style>
       /* Copied from style.css so this page functions as a standalone */
+      /* Cards */
+
+      .card {
+        border-radius: 7px;
+        box-shadow: 0 0 20px 10px #f3f3f3;
+        overflow: hidden;
+      }
+
+      .card__header,
+      .card__body {
+        padding: 2rem 3rem;
+      }
+
+      .card--primary .card__header {
+        background-color: var(--color-primary);
+        color: white;
+      }
+
+      .card--secondary .card__header {
+        background-color: var(--color-secondary);
+        color: white;
+      }
     </style>
   </head>
 
@@ -30,7 +52,58 @@
         header section <br />
         body section <br />
         list <br />
+        buttons <br />
+        <br />
+        Stage 1) Create element structure ( header + body inside of a Div )
+        <br />
+        Stage 2) Create classes, sticking to BEM conventions. <br />
+        In this case, elements depend on the child being inside of the parent
+        <br />
+        Ex: div__header | card__body | card__header <br />
+        Stage 3) Create basic class for card <br />
+        (No set width for Card - Let the card take allowed space from whatever
+        its put in later ) <br />
+        Stage 4) Test it works with an inline style setting width - Dont use in
+        production <br />
+        Stage 5) Create basic class for header + body to set padding to be same.
+        <br />
+        stage 6) Create Color classes primary + secondary <br />
+        <br />
+        Stage 7) color class Exceeds space of parent class - Set parent class to
+        overflow:hidden; <br />
       </p>
+      Before;
+      <div>
+        <div>Card Title</div>
+        <div>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, beatae.
+        </div>
+      </div>
+      <br />
+      Stage 1-7)
+
+      <div style="width: 50%; padding: 4rem">
+        <div class="card card--primary">
+          <header class="card__header">Card Title</header>
+          <div class="card__body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint,
+            labore.
+          </div>
+        </div>
+      </div>
+      <br />
+      <br />
+      <div style="width: 50%; padding: 4rem">
+        <div class="card card--secondary">
+          <header class="card__header">Card Title</header>
+          <div class="card__body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint,
+            labore.
+          </div>
+        </div>
+      </div>
+
+      <h2>Now we have to put them the items together!</h2>
     </div>
   </body>
 </html>

@@ -286,11 +286,34 @@ it will bleed into other rules. */
   margin: 4px;
 }
 
-.input-shadow {
+.input-group--shadow {
   box-shadow: 0 0 10px grey;
 }
 @media screen and (min-width: 1024px) {
   input {
     font-size: 1.5rem;
   }
+}
+
+/* Cards */
+
+.card {
+  border-radius: 7px;
+  box-shadow: 0 0 20px 10px #f3f3f3;
+  overflow: hidden;
+}
+
+.card__header,
+.card__body {
+  padding: 2rem 3rem;
+}
+
+.card--primary .card__header {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.card--secondary .card__header {
+  background-color: var(--color-secondary);
+  color: white;
 }
