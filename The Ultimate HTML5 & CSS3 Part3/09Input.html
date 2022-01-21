@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,400;0,800;1,200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Project/css/style.css" />
+    <title>Document</title>
+
+    <style>
+      /* Copied from style.css so this page functions as a standalone */
+      /* Inputs */
+
+.input {
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+  color: var(--color-heading);
+  font-size: 2rem;
+  outline: 0;
+  padding: 1.5rem 3.5rem;
+}
+
+::placeholder {
+  color: #b0afd7;
+}
+
+.input-group {
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  display: flex;
+}
+
+.input-group .input {
+  border: 0;
+  flex-grow: 1;
+  padding: 1.5rem 1rem;
+}
+
+.input-group .btn {
+  margin: 4px;
+}
+
+@media screen and (min-width: 1024px) {
+  input {
+    font-size: 1.5rem;
+  }
+}
+
+
+    </style>
+  </head>
+
+  <body>
+    <h1>Inputs</h1>
+    <div>
+      Inspect design sheet. <br />
+      Pillshaped Text input - with no border + small shadow + contains button
+      Stage 1) Create basic class: <br />
+      Font-size/Color + Box Model + Outline + border-radius <br />
+      Stage 2) Create ::placeholder class to target placeholder text <br />
+      Stage 3) Create Media Query for Adaptability.
+      <br />
+      Before: <br />
+      <input type="text" /> <br />
+      <br />
+      Stage 1 / 2 / 3 <br />
+      <br />
+      <input type="text" class="input" placeholder="Type your search term" />
+      <br /><br />
+      <h2>Input Groups</h2>
+      <p>
+        Now we need to add button inside our input component... <br />
+        It doesn't quite work like that. <br>
+        Slap the input component, and the button component into a div, 
+        <br>  then style the div as a container component. <br>
+        Step 1) Create basic component <br>
+        Step 2) Realise we're hardcoding the same color + border-radius more than once - <br>
+          Amend color + border-radius to a var() in ::root. 
+        <br> (and chance in the places we've used it ) <br>
+        Step 3) Borders, Borders everywhere.. <br>  Lets fix out mess with nesting. <br>  
+        Create rule to target inputs inside of an input-group - <br> So that stand alone inputs wont be effected    <br>
+        Step 4) Okay, border is gone, button is still in the wrong place. <br> 
+        Step 5) Push button to the right with Flexbox. <br> 
+        Step 6) Fix margin between button and container - <br>
+        Create rule targeting Buttons inside of Input-Groups <br>
+        Amending the margin to absolute value <br>
+        Step 7) Can move button location... <br>
+        Step 8) Can replace button element with icon element. <br>
+        Step 9) Fix padding of input class inside input-group class. <br>
+
+
+
+        <br />
+        Before: <br>
+        <div class=>
+          <input type="text" class="input" placeholder="Type your search term" />
+          <button class="btn btn--accent">Search</button>
+        </div>
+        <br>
+        <br>
+        Stage : <br>
+        <div class="input-group">
+          <input type="text" class="input" placeholder="Type your search term" />
+          <button class="btn btn--accent">Search</button>
+        </div>
+        <br>
+        Stage 7 <br>
+        <div class="input-group">
+          <button class="btn btn--accent">Search</button>
+          <input type="text" class="input" placeholder="Type your search term" />
+        </div>
+        Stage 8 <br>
+        <div class="input-group">
+          <span class="icon-container">
+            <svg class="icon">
+              <use xlink:href="./Project/images/spriteA.svg#zero"></use>
+            </svg>
+          </span>
+          <input type="text" class="input" placeholder="Type your search term" />
+        </div>      
+
+        
+      </p>
+    </div>
+  </body>
+</html>
