@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,400;0,800;1,200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Project/css/style.css" />
+    <title>Document</title>
+
+    <style>
+      /* Copied from style.css so this page functions as a standalone */
+      /* Quote */
+
+      .quote {
+        font-size: 3rem;
+        font-weight: bold;
+        font-style: italic;
+        color: var(--color-body-darker);
+        line-height: 1.3;
+      }
+
+      .quote__text::before {
+        content: open-quote;
+      }
+
+      .quote__text::after {
+        content: close-quote;
+      }
+
+      .quote__author {
+        font-size: 3rem;
+        font-weight: 500;
+        font-style: normal;
+        margin-bottom: 0;
+      }
+
+      .quote__organization {
+        color: var(--color-heading);
+        opacity: 0.6;
+        font-size: 2rem;
+        font-size: normal;
+      }
+
+      .quote__image {
+        position: relative;
+        bottom: 10px;
+      }
+
+      @media screen and (min-width: 1024px) {
+        .quote {
+          font-size: 2rem;
+        }
+        .quote__author {
+          font-size: 2.4rem;
+        }
+
+        .quote__organization {
+          font-size: 1.6rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Quote Component</h1>
+    <br />
+    Quote should include <br />
+    actual quote, name of source and perhaps their title. <br /><br />
+
+    Step 1) q or blockquote (inline or block) <br />
+    Step 2) Inspect design sheet - Need larger, lighter text <br />
+    Step 3) Add additional colour to color palette. <br />
+    Step 4) Insert color var(--color-body-darker) <br />
+    Step 5) Amend line height <br />
+    Step 6) Add " " before and after the text.. Create class "quote__text"
+    <br />
+    Step 7) use psuedo elements ::before and :: after to add content:
+    open-quote; and close-quote; to transform this into "this" <br />
+    Step 8) Need to add name of source.. Inspecting design sheet <br />
+    The name of source is inside a media component. <br />
+    Step 9) Create footer - add media component created prior. <br />
+    Step 10) Media title becomes source / media body becomes relevance <br />
+    Step 11) Style header with class "quote__author" <br />
+    Step 12) override inherited styles <br />
+    Step 13) style body with class "quote__organization" <br />
+    Step 14) override inherited styles - <br />
+    Step 15) remove bottom margin of author <br />
+    Step 16) Amend position of icon in line with design sheet. <br />
+    Step 17) position: relative; and bottom:10px will move it up <br />
+    Step 18) responsiveness through media query <br />
+
+    <br />
+    <br />
+
+    <br />
+    Before <br />
+
+    <div>
+      <blockquote class="que">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
+          fugiat.
+        </p>
+      </blockquote>
+    </div>
+    <br />
+    <br />
+    After
+    <br />
+    <div>
+      <blockquote class="quote">
+        <p class="quote__text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
+          fugiat.
+        </p>
+        <footer>
+          <div class="media">
+            <div class="media__image">
+              <svg class="icon .icon--primary quote__image">
+                <use xlink:href="./Project/images/spriteA.svg#zero"></use>
+              </svg>
+            </div>
+            <div class="media__body">
+              <h3 class="media__title quote__author">John Doe</h3>
+              <p class="quote__organization">HTML Rockstar</p>
+            </div>
+          </div>
+        </footer>
+      </blockquote>
+    </div>
+
+    <br />
+  </body>
+</html>
