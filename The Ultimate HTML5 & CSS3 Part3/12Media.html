@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,400;0,800;1,200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Project/css/style.css" />
+    <title>Document</title>
+
+    <style>
+      /* Copied from style.css so this page functions as a standalone */
+    </style>
+  </head>
+
+  <body>
+    <h1>Media Objects</h1>
+    <br />
+    Standalone component consiting of; <br />
+    Image on right <br />
+    Header on left <br />
+    Discription on left <br />
+    (Think of Facebook posts / Tweets) <br /><br />
+
+    Stage 1) Create HTML Shell 2 divs inside 1 div. <br />
+    Stage 2) Create classes - media__body and media__image inside media. <br />
+    Stage 3) insert image into media__image > (Steal icon for example) <br />
+    Stage 4) Remove icon from container, because its not meant to be here <br />
+    Stage 5) Body needs a heading and some text... <br />
+    Stage 6) Amend flow with display:flex; <br />
+    Stage 7) Extra margin from our h3? - Amend with margin-top: 0; <br />
+    Stage 8) Text too close! amend with margin: 0 2rem in the body. <br />
+    Stage 9) Image too high! amend with margin-top: Stage 10) Thats our basic
+    implementation finished. <br />
+    No need to worry about background - it will be inherited later No need to
+    worry about font size/weight - We will fine tune when its implemented.
+    <br />
+    <br />
+    <br />
+
+    <div class="meda">
+      <div class="media__imae">
+        <span class="icon-container">
+          <svg class="icon .icon--primary">
+            <use xlink:href="./Project/images/spriteA.svg#three"></use>
+          </svg>
+        </span>
+      </div>
+      <div class="media__bdy">
+        <h3>Easy Start</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam,
+          quibusdam?
+        </p>
+      </div>
+    </div>
+    <br /><br />
+
+    After; <br /><br />
+    <div class="media">
+      <div class="media__image">
+        <svg class="icon .icon--primary">
+          <use xlink:href="./Project/images/spriteA.svg#three"></use>
+        </svg>
+      </div>
+      <div class="media__body">
+        <h3 class="media__title">3 Step program</h3>
+        <p>
+          Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Non, ullam.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
