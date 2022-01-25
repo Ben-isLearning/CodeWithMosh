@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,400;0,800;1,200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Project/css/style.css" />
+
+    <title>Document</title>
+
+    <style>
+      /* Copied from style.css so this page functions as a standalone */
+    </style>
+  </head>
+
+  <body>
+    <h1>Collapsible component</h1>
+    <p>
+      Inspecting design sheet <br />
+      We need... header + body <br />
+      heading - h3 + icon <br />
+    </p>
+
+    Step 1) Add html + classes <br />
+    Step 2) Copy paste icon into header <br />
+    Step 3) Move icon in row with header  using flex. <br>
+    step 4) amend margin of heading to make icon and heading on same level <br>
+    step 5) set flex-container to space-between; <br>
+    step 6) No width specified - it will be inherited in later implementations <br>
+    Step 7) remove container from copy/pasted icon. <br>  
+    Step 8) Set up responsiveness <br>
+    Step 9) Create styles to set content to display:none and rotate the arrow 90 deg. <br>
+    Step 10) Add in JS to toggle between state A and state B <br>
+    Step 11) Create transition for our transformation <br>  
+    Step 12) Closed State;   max-height: 0;
+    overflow: hidden;
+    opacity: 0; <br>
+    Step 13) Open State;    max-height: 100vh;
+    opacity: 1; <br>
+    Step 14)   transition: all 0.5s; <br>
+    
+
+
+    <br />
+    Before; <br />
+
+    <div class="sible">
+      <header>
+        <h3>Item 1</h3>
+        <span class="icon-container">
+          <svg class="icon .icon--primary">
+            <use xlink:href="./Project/images/arrow.svg"></use>
+          </svg>
+        </span>
+      </header>
+      <div class="ntent">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque, ipsa?
+      </div>
+    </div>
+
+    <br />
+    <br />
+    After: <br />
+
+    <div class="collapsible">
+      <header class="collapsible__header">
+        <h3 class="collapsible__heading">Item 1</h3>
+  
+        <svg class="icon icon--primary collapsible__arrow">
+          <use xlink:href="/Project/images/spriteB.svg#arrow"></use>
+        </svg>
+
+      </header>
+      <div class="collapsible__content">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque, ipsa?
+      </div>
+    </div>
+    <br>
+    <div class="collapsible">
+      <header class="collapsible__header">
+        <h3 class="collapsible__heading">Item 1</h3>
+  
+        <svg class="icon icon--primary collapsible__arrow">
+          <use xlink:href="/Project/images/spriteB.svg#arrow"></use>
+        </svg>
+
+      </header>
+      <div class="collapsible__content">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque, ipsa?
+      </div>
+    </div>
+    <br>
+    <br>  <br><br><br><br>
+  </body>
+</html>
+<script src="/Project/js/main.js"></script>
+  </body>
+</html>
