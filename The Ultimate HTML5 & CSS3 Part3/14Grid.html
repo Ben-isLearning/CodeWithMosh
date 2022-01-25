@@ -15,10 +15,57 @@
 
     <style>
       /* Copied from style.css so this page functions as a standalone */
+      /* Grid */
+
+      .grid {
+        display: grid;
+      }
+
+      @media screen and (min-width: 768px) {
+        .grid--cols-2 {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media screen and (min-width: 1024px) {
+        .grid--cols-3 {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
     </style>
   </head>
 
   <body>
     <h1>Grid Component</h1>
+    2 column grid on desktop > 1 column grid on mobile <br />
+    Step 1) Align grid contents to be side - by - side <br />
+    Step 2) Set @media to implement the cols-2 class only on certain screen
+    sizes <br />
+    Step 3) Set @media to implement the cols-3 class only on certain screen
+    sizes. <br />
+
+    <br />
+    <br />
+    Before: <br />
+
+    <div class="">
+      <div style="height: 100px; background-color: gold"></div>
+      <div style="height: 100px; background-color: dodgerblue"></div>
+    </div>
+
+    After: <br /><br />
+
+    <div class="grid grid--cols-2">
+      <div style="height: 100px; background-color: gold"></div>
+      <div style="height: 100px; background-color: dodgerblue"></div>
+    </div>
+
+    <br /><br />
+    * 3 column grid
+    <div class="grid grid--cols-3">
+      <div style="height: 100px; background-color: gold"></div>
+      <div style="height: 100px; background-color: dodgerblue"></div>
+      <div style="height: 100px; background-color: tomato"></div>
+    </div>
   </body>
 </html>
