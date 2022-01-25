@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,400;0,800;1,200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Project/css/style.css" />
+    <title>Document</title>
+
+    <style>
+      /* Copied from style.css so this page functions as a standalone */
+    </style>
+  </head>
+
+  <body style="padding: 5rem">
+    <h1>Testimonials</h1>
+
+    Step 1) Add in Holder element - div.card <br />
+    Step 2) Add in Grid element - div.grid.grid--cols-2 <br />
+    Step 3) Add in image element <br />
+    Step 4) Add in Dummy text element <br />
+    (Replace with Quote component later - For now get the basics right) <br />
+    Need to make image responsive! ~ Image currently has width 000px - Need to
+    make it %! <br />
+    Step 5) See design sheet - implement padding / Make image width:100% to be
+    responsive. <br />
+    Step 6) Create div around image to include quote graphic - transfer class
+    testimonial__image from img element to div <br />
+    Step 7) Ammend CSS rule from .testimonial__image to .testimonial__image >
+    img <br />
+    Step 8) Insert icon with absolute positioning. <br />
+    Step 9) Enable relative positioning on the parent element <br />
+    Step 10) Copy + paste icon we made earlier <br />
+    Step 11) enable absolute positioning on the child element (icon) <br />
+    Step 12) Set position on icon <br />
+    Step 13) Define brand new skins for the icon <br />
+    Step 14) New flavour classes - Size / Color / Container color etc <br />
+    Step 15) Delete temporary Div - paste in our quote component. <br />
+    Step 16)
+    <br />
+
+    Before: <br />
+
+    <div>
+      <div>
+        <img />
+        <div></div>
+      </div>
+    </div>
+
+    <br />
+    <br />
+    After: <br />
+
+    <div class="card testimonial">
+      <div class="grid grid--cols-2">
+        <div class="testimonial__image">
+          <img src="/Project/images/man.jpg" alt="a happy, employed person" />
+          <span class="icon-container icon-container--body">
+            <svg class="icon icon--small icon--white">
+              <use xlink:href="./Project/images/spriteA.svg#ten"></use>
+            </svg>
+          </span>
+        </div>
+        <div>
+          <blockquote class="quote">
+            <p class="quote__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
+              fugiat.
+            </p>
+            <footer>
+              <div class="media">
+                <div class="media__image">
+                  <svg class="icon .icon--primary quote__image">
+                    <use xlink:href="./Project/images/spriteA.svg#zero"></use>
+                  </svg>
+                </div>
+                <div class="media__body">
+                  <h3 class="media__title quote__author">John Doe</h3>
+                  <p class="quote__organization">HTML Rockstar</p>
+                </div>
+              </div>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

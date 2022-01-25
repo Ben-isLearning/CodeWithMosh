@@ -174,6 +174,10 @@ it will bleed into other rules. */
   height: 40px;
 }
 
+.icon--small {
+  width: 30px;
+  height: 30px;
+}
 .icon-container {
   display: inline-flex;
   justify-content: center;
@@ -184,12 +188,19 @@ it will bleed into other rules. */
   border-radius: 100%;
 }
 
+.icon-container--body {
+  background-color: var(--color-body);
+}
 .icon--primary {
   fill: var(--color-primary);
 }
 
 .icon--secondary {
   fill: var(--color-secondary);
+}
+
+.icon--white {
+  fill: white;
 }
 
 /* Buttons */
@@ -442,7 +453,7 @@ it will bleed into other rules. */
 
 @media screen and (min-width: 1024px) {
   .quote {
-    font-size: 2rem;
+    font-size: 4rem;
   }
   .quote__author {
     font-size: 2.4rem;
@@ -470,3 +481,34 @@ it will bleed into other rules. */
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* Testiomonial */
+
+.testimonial {
+  padding: 3rem;
+}
+
+.testimonial__image {
+  position: relative;
+}
+
+.testimonial__image > img {
+  width: 100%;
+}
+
+.testimonial__image > .icon-container {
+  position: absolute;
+  top: 3.5rem;
+  right: -32px;
+}
+
+.testimonial .quote {
+    margin-left: 6rem;
+}
+
+@media screen and (min-width: 786px) {
+  .testimonial .quote,
+  .testimonial .quote__author {
+    font-style: 2.4rem;
+  }
+
