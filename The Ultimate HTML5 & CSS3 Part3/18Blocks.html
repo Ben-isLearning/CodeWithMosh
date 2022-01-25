@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,400;0,800;1,200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Project/css/style.css" />
+
+    <title>Document</title>
+
+    <style>
+      /* Copied from style.css so this page functions as a standalone */
+    </style>
+  </head>
+
+  <body>
+    <h1>Blocks</h1>
+    a block - a standalone section of content. <br />
+    Example in isolation <br />
+    Step 1: Create HTML shell <br />
+    Step 2: Create classes~ block | <br />
+    Step 3: Issue ~ More space at top, than bottom - caused by h2... <br />
+    Step 3: create classes~ block__heading | <br />
+    Step 3: Amend margin-top on block__heading <br />
+    Step 4: create classes~ block--dark <br />
+    Step 4: Style .block--dark and .block--dark .block__heading to creat skin
+    rules. <br />
+    step 5: Creating stylish backgrounds / Clip path...
+    <a href="https://bennettfeely.com/clippy/">Here</a> <br />
+    Step 5: Create clip path on website - copy+paste in new css rule. <br />
+    Step 5: apply new class to block <br />
+    Step 5: Skew messes with design.. lets add more padding <br />
+    Step 6: What if we want more padding later? <br />
+    Step 6: @block ~ store hardcoded 6rem value to a varaible. <br />
+    step 6: @block--skewed-right ~ use calc() to add on a value to the stored
+    variable. <br />
+    step 6: (If variable changes, it'll be updated down here too!) <br />
+    Step 7: Create class~ block--skewed-left <br />
+    Step 8: headings need to be center aligned <br />
+    step 8: wrap h2 and paragraph in a div ~ Class= "block__header" <br />
+    Step 9: Check it works - add in a card <br />
+    Step 9: Check design sheet - header Needs to be contained <br />
+    Step 9: in containing the header, its defaulted to sitting left. <br />
+    Step 9: add margin: 0 auto: to container. <br />
+    <br />
+    <br />
+    Before:
+    <section>
+      <h2>Heading</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur,
+        illum.
+      </p>
+    </section>
+
+    <br />
+    <br />
+    After: <br />
+
+    <section class="block">
+      <div class="container">
+        <div class="block__header">
+          <h2 class="block__heading">Heading</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Aspernatur, illum. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Dignissimos, a.
+          </p>
+        </div>
+      </div>
+    </section>
+    <br />
+
+    <section class="block block--dark block--skewed-right">
+      <div class="container">
+        <div class="block__header">
+          <h2 class="block__heading">Heading</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Aspernatur, illum. Lorem ipsum dolor sit amet consectetur,
+            adipisicing elit. Aspernatur, illum.
+          </p>
+        </div>
+      </div>
+    </section>
+    <br />
+    <section class="block block--dark block--skewed-left">
+      <div class="container">
+        <div class="block__header">
+          <h2 class="block__heading">Heading</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Aspernatur, illum. Lorem ipsum dolor sit amet consectetur,
+            adipisicing elit. Aspernatur, illum.
+          </p>
+        </div>
+      </div>
+      <div style="width: 50%; padding: 2rem">
+        <div class="card card--secondary">
+          <header class="card__header">Card Title</header>
+          <div class="card__body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint,
+            labore.
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
