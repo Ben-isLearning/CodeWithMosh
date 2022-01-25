@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,400;0,800;1,200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Project/css/style.css" />
+
+    <title>Document</title>
+
+    <style>
+      /* Copied from style.css so this page functions as a standalone */
+    </style>
+  </head>
+
+  <body>
+    <h1>NavBar</h1>
+
+    Step 1) Create HTML Shell <br />
+    Step 1) Nav > a (icon), svg(toggler), ul <br />
+    Step 2) Create classes for items <br />
+    Step 2) nav | nav_list <br />
+    Step 3) Style nav ~ background-color: #000; display: flex; justify-content:
+    space-between; <br />
+    Step 3) Style nav_list ~ width: 100%; <br />
+    Step 4) Create classes for items <br />
+    Step 4) nav__item <br />
+    Step 5) Style nav__item ~ <br />
+    Step 5) Style link within nav item <br />
+    step 5) Style hover effect + transition <br />
+    step 6) Create class for toggler "nav__toggler" <br />
+    step 6) Add additional class for nav element ~ "collapsible" <br />
+    step 6) Add additional class for list element ~ "collapsible__content "
+    <br />
+    step 6) -- Dont forget Javascript from earlier -- <br />
+    step 7) Test the functionality. <br />
+    step 8) Inspect to find extra space. <br />
+    step 8) Set margin of .nav__list to 0 <br />
+    step 8) set margin of nav to 0 1rem <br />
+    Step 9) toggler not in middle... <br />
+    Step 9) set align-content: center <br />
+    Step 10) Create a JS dependant rule. <br />
+    step 10) JS injects class "collapsible--expanded". <br />
+    Step 10) new rule for ~ .nav.collapsible--expanded .nav__toggler { <br />
+    Step 10) opacity: 1; box-shadow: 0 0 0 1px var(--color-secondary);
+    border-radius: 50%; <br />
+    Step 10) gives pretty shadow when extra class is present. <br />
+    Step 11) Add transition <br />
+    Step 11) Add pointer so the thing looks clickable. <br />
+    Step 12) Media Query for responsiveness <br />
+
+    <br /><br />
+    <nav class="nav collapsible">
+      <a class="nav__brand" href="/">
+        <img
+          class="icon icon--large"
+          src="/Project/images/sillylogo.png"
+          alt=""
+        />
+      </a>
+      <svg class="icon icon--white nav__toggler">
+        <use xlink:href="/Project/images/spriteB.svg#arrow"></use>
+      </svg>
+      <ul class="list nav__list collapsible__content">
+        <li class="nav__item"><a href="#">Hosting</a></li>
+        <li class="nav__item"><a href="#">VPS</a></li>
+        <li class="nav__item"><a href="#">Domain</a></li>
+        <li class="nav__item"><a href="#">Pricing</a></li>
+      </ul>
+    </nav>
+
+    <br /><br /><br /><br />
+    <script src="/Project/js/main.js"></script>
+  </body>
+</html>
