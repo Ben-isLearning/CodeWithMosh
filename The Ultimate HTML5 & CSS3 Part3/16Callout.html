@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,400;0,800;1,200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Project/css/style.css" />
+    <title>Document</title>
+
+    <style>
+      /* Copied from style.css so this page functions as a standalone */
+    </style>
+  </head>
+
+  <body style="padding: 5rem">
+    <h1>Callout / Call to action</h1>
+
+    Looks like a card, but its different. <br />
+    Semantically different components. <br />
+
+    -Could adapt the card, but its easier to create a new component. <br />
+    Mob- 1col grid / Desktop- 2col grid. <br />
+    Step 1: Create HTML Shell + Add classes <br />
+    step 2: Create foundation class <br />
+    step 3: Create color class for container <br />
+    step 4: create color class for heading <br />
+    step 5: override margin / font size that has been inherited in heading class
+    <br />
+    step 6: create position class for button to change alignment of huge-ugly
+    button <br />
+    Step 7: create position class for text inside "callout__content" <br />
+    Step 8: create reusable class for button padding <br />
+    Step 9: All done on mobile <br />
+    Step 10: Alignment on Desktop ~@media <br />
+
+    <div>
+      <div>
+        <div>
+          <h2>Ready</h2>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <a href="">Get started</a>
+      </div>
+    </div>
+
+    <br />
+    <br />
+    After <br />
+
+    <div class="callout callout--primary">
+      <div class="grid grid--cols-2">
+        <div class="callout__content">
+          <h2 class="callout__heading">Are you ready?</h2>
+          <p>
+            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit. Incidunt, odio.
+          </p>
+        </div>
+        <a class="btn btn--secondary btn--stretched" href="">Get started</a>
+      </div>
+    </div>
+  </body>
+</html>
