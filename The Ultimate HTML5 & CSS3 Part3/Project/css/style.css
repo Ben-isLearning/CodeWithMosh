@@ -277,6 +277,11 @@ it will bleed into other rules. */
   border: 2px solid var(--color-heading);
 }
 
+.btn--heading {
+  background-color: var(--color-heading);
+  color: #fff;
+}
+
 .btn--outline:hover {
   background-color: var(--color-heading);
   color: #fff;
@@ -351,8 +356,12 @@ it will bleed into other rules. */
   color: white;
 }
 
+.card--primary .badge--primary {
+  background-color: #1a3b20;
+}
+
 .card--secondary .badge--secondary {
-  background-color: #156927;
+  background-color: #227c35;
 }
 
 /* Plans */
@@ -383,6 +392,17 @@ it will bleed into other rules. */
 
 .plan .list__item {
   margin-bottom: 2rem;
+}
+
+.plan--popular {
+  transform: scale(1.1);
+}
+
+.plan:hover {
+  transform: scale(1.05);
+}
+.plan--popular:hover {
+  transform: scale(1.15);
 }
 
 .plan--popular .card__header::before {
@@ -758,4 +778,19 @@ it will bleed into other rules. */
   .block-domain__prices {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   }
+}
+
+/* Plans Block */
+
+.plan {
+  transition: transform 0.2s ease-out;
+}
+
+.block-plans .grid {
+  gap: 4rem;
+}
+
+.block-plans .card {
+  max-width: 500px;
+  margin: 0 auto;
 }

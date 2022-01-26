@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,400;0,800;1,200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Project/css/style.css" />
+
+    <title>Document</title>
+
+    <style>
+      /* Copied from style.css so this page functions as a standalone */
+    </style>
+  </head>
+
+  <body>
+    <h1>Plans</h1>
+
+    <br /><br />
+    Solution <br />
+    Step 1) Add section ~ .block.container <br />
+    Step 2) Add div ~ .grid.grid--cols-3 <br />
+    Step 3) Copy / Paste x3 plans <br />
+    Looking good... <br />
+    Step 4) Apply gap to grid <br />
+    Mobile is done <br />
+    Check Tablet view <br />
+    Step 5) Apply maxwidth to plans. apply margin 0 auto to plans too. <br />
+    Tablet is done <br />
+
+    <section class="block container block-plans">
+      <div class="grid grid--cols-3">
+        <div>
+          <div class="plan">
+            <div class="card card--secondary">
+              <header class="card__header">
+                <h3 class="plan__name">Entry</h3>
+                <span class="plan__price">£10</span>
+                <span class="plan__billing-cycle">/ Hour</span>
+                <span class="badge badge--secondary badge--small">Urgent!</span>
+                <span class="plan__description">Gotta begin somewhere!</span>
+              </header>
+              <div class="card__body">
+                <ul class="list list--tick">
+                  <li class="list__item">No experience required!</li>
+                  <li class="list__item">Free parking</li>
+                  <li class="list__item">Free fruit</li>
+                  <li class="list__item">Casual Fridays!</li>
+                </ul>
+                <a href="#" class="btn btn--outline btn--block">Apply Here</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="plan">
+            <div class="card card--primary plan--popular">
+              <header class="card__header">
+                <h3 class="plan__name">Entry</h3>
+                <span class="plan__price">£10</span>
+                <span class="plan__billing-cycle">/ Hour</span>
+                <span class="badge badge--primary badge--small">Urgent!</span>
+                <span class="plan__description">Gotta begin somewhere!</span>
+              </header>
+              <div class="card__body">
+                <ul class="list list--tick">
+                  <li class="list__item">No experience required!</li>
+                  <li class="list__item">Free parking</li>
+                  <li class="list__item">Free fruit</li>
+                  <li class="list__item">Casual Fridays!</li>
+                </ul>
+                <a href="#" class="btn btn--outline btn--block">Apply Here</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="plan">
+            <div class="card card--secondary">
+              <header class="card__header">
+                <h3 class="plan__name">Entry</h3>
+                <span class="plan__price">£10</span>
+                <span class="plan__billing-cycle">/ Hour</span>
+                <span class="badge badge--secondary badge--small">Urgent!</span>
+                <span class="plan__description">Gotta begin somewhere!</span>
+              </header>
+              <div class="card__body">
+                <ul class="list list--tick">
+                  <li class="list__item">No experience required!</li>
+                  <li class="list__item">Free parking</li>
+                  <li class="list__item">Free fruit</li>
+                  <li class="list__item">Casual Fridays!</li>
+                </ul>
+                <a href="#" class="btn btn--outline btn--block">Apply Here</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <br /><br /><br />
+
+    middle plan is bit bigger <br />
+    all plans grow in size. <br />
+    Step 1) HTML Shell <br />
+    Section > Header > span | span | span | badge | span | img <br />
+    Section > Div > ul | button | <br />
+
+    Step 2) Copy/paste Three! plan components from earlier. <br />
+    Step 3) Slap them all in a section - class container <br />
+    Step 4) link up the class to make the containing class a grid--cols-3 <br />
+    <br />
+    I reckon... <br />
+    /* Plans Play */ .container__plan { <br />
+    margin: 3rem; <br />
+    align-self: baseline; <br />
+    transition: transform 0.5s;<br />
+    }<br />
+    <br />
+    .plan--large {<br />
+    transform: scale(1.1);<br />
+    }<br />
+    <br />
+    .container__plan:hover {<br />
+    transform: scale(1.2);<br />
+    }<br />
+
+    <section class="block container grid grid--cols-3">
+      <div class="container__plan">
+        <div class="plan">
+          <div class="card card--secondary">
+            <header class="card__header">
+              <h3 class="plan__name">Entry</h3>
+              <span class="plan__price">£10</span>
+              <span class="plan__billing-cycle">/ Hour</span>
+              <span class="badge badge--secondary badge--small">Urgent!</span>
+              <span class="plan__description">Gotta begin somewhere!</span>
+            </header>
+            <div class="card__body">
+              <ul class="list list--tick">
+                <li class="list__item">No experience required!</li>
+                <li class="list__item">Free parking</li>
+                <li class="list__item">Free fruit</li>
+                <li class="list__item">Casual Fridays!</li>
+              </ul>
+              <a href="#" class="btn btn--outline btn--block">Apply Here</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container__plan">
+        <div class="plan plan--large">
+          <div class="card card--primary plan--popular">
+            <header class="card__header">
+              <h3 class="plan__name">Entry</h3>
+              <span class="plan__price">£10</span>
+              <span class="plan__billing-cycle">/ Hour</span>
+              <span class="badge badge--secondary badge--small">Urgent!</span>
+              <span class="plan__description">Gotta begin somewhere!</span>
+            </header>
+            <div class="card__body">
+              <ul class="list list--tick">
+                <li class="list__item">No experience required!</li>
+                <li class="list__item">Free parking</li>
+                <li class="list__item">Free fruit</li>
+                <li class="list__item">Casual Fridays!</li>
+              </ul>
+              <a href="#" class="btn btn--heading btn--block">Apply Here</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container__plan">
+        <div class="plan">
+          <div class="card card--secondary">
+            <header class="card__header">
+              <h3 class="plan__name">Entry</h3>
+              <span class="plan__price">£10</span>
+              <span class="plan__billing-cycle">/ Hour</span>
+              <span class="badge badge--secondary badge--small">Urgent!</span>
+              <span class="plan__description">Gotta begin somewhere!</span>
+            </header>
+            <div class="card__body">
+              <ul class="list list--tick">
+                <li class="list__item">No experience required!</li>
+                <li class="list__item">Free parking</li>
+                <li class="list__item">Free fruit</li>
+                <li class="list__item">Casual Fridays!</li>
+              </ul>
+              <a href="#" class="btn btn--outline btn--block">Apply Here</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="/Project/js/main.js"></script>
+  </body>
+</html>
