@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,400;0,800;1,200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Project/css/style.css" />
+
+    <title>Document</title>
+
+    <style>
+      /* Copied from style.css so this page functions as a standalone */
+    </style>
+  </head>
+
+  <body>
+    <h1>Hero</h1>
+    <p>
+      Hero component - Also known as a banner <br />
+      Block - Dark / Skewed left <br />
+      2-col Grid - content / image <br />
+      Mob (1-col Grid) <br />
+      <br />
+      <br />
+      Step 1) Create HTML Shell <br />
+      Section > Div > h2 | p | a <br />
+      Section > Div > img <br />
+      <br />
+      Step 2) add classes to a tag to insert button <br />
+      Step 3) Fix lineheight for headings <br />
+      Step 4) Add classes to h tag to amend style <br />
+      Step 6) add class to div >hero__content <br />
+      Step 5) add class to p >hero__tagline <br />
+      Step 6) add class to img >hero__image <br />
+      <br />
+
+      Classes should start with Generic classes, then end with Specific classes
+      to override. <br />
+    </p>
+
+    <br /><br />
+
+    <section class="block block--dark block--skewed-left hero">
+      <div class="container grid grid--cols-2">
+        <header class="block__header hero__content">
+          <h2 class="block__heading">Pirate Ship Enterprise</h2>
+          <p class="hero__tagline">Now hiring! Great pay! Lots of Booty!</p>
+          <a class="btn btn--accent btn--stretched" href="#">Hire Me! </a>
+        </header>
+        <img class="hero__image" src="/Project/images/ship.png" alt="" />
+      </div>
+    </section>
+
+    <script src="/Project/js/main.js"></script>
+  </body>
+</html>
