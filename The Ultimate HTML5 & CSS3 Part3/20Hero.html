@@ -42,7 +42,32 @@
 
       Classes should start with Generic classes, then end with Specific classes
       to override. <br />
+
+      <br />
+      <br />
+      ++ Serving Correctly Sized Images ++ <br />
+      // Optimizing Images // <br />
+      <br />
+      Serve Image at a dedicated size for the element you're putting it in.
+      <br />
+      Ex: The component below is hardcoded to be 1140px wide. <br />
+      The image will take up 50% of that - (1col of our 2col grid) <br />
+      As such, the largest our image will be, is 570px wide <br />
+      Which means there is no sence serving a 4k image. <br />
+      <br />
+      What about Mobile? <br />
+      Mobile resolution is less than 570px; So size is fine - NOT! <br />
+      To cater to Mobile's pixel dense screens - we need to double the size!
+      <br />
+      Serve 1 image@ 570px wide - image <br />
+      Serve 1 image@ 1140px wide - image@2x <br />
+      <br />
+      One step further - Make the Pngs into Webps! <br />
+      Img 1.png (363 kb) >> Img 1.webp (42kb) <br />
+      Img 1@x2.png (1138kb) >> Img 1@2x.webp (94kb) <br />
+      Wowee, thats a mega reduction!!!
     </p>
+    <br />
 
     <br /><br />
 
@@ -53,7 +78,21 @@
           <p class="hero__tagline">Now hiring! Great pay! Lots of Booty!</p>
           <a class="btn btn--accent btn--stretched" href="#">Hire Me! </a>
         </header>
-        <img class="hero__image" src="/Project/images/ship.png" alt="" />
+        <picture>
+          <source
+            type="image/webp"
+            srcset="
+              /Project/images/ship.webp    1x,
+              /Project/images/ship@2x.webp 2x
+            " />
+          <source
+            type="image/png"
+            srcset="
+              /Project/images/ship.png    1x,
+              /Project/images/ship@2x.png 2x
+            " />
+          <img class="hero__image" src="/" alt=""
+        /></picture>
       </div>
     </section>
 
