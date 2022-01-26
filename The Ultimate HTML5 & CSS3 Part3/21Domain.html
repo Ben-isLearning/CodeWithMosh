@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,400;0,800;1,200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Project/css/style.css" />
+
+    <title>Document</title>
+
+    <style>
+      /* Copied from style.css so this page functions as a standalone */
+    </style>
+  </head>
+
+  <body>
+    <h1>Domain Block</h1>
+    Consisting of; Heading, Subheading, SearchBox /w button, Prices. <br />
+
+    <br />
+    <br />
+    Step 1) HTML Container + Class implementation ~block + container <br />
+    Step 2) HTML header + class implementation ~ h2 / p <br />
+    Step 3) Copy/Paste Template for input group <br />
+    Step 4) Copy/Paste Template for icon inside button <br />
+    Step 5) Insert grid below search bar <br />
+    Step 6) style grid - add content <br />
+    Step 7) Style content <br />
+    Step 8) add badge component we made earlier <br>
+    Step 9) @media for grid to change from 2X3 to 1X6 >     grid-template-columns: repeat(6, 1fr);  <br>
+    Step 10) What if the list grows?        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); <br>
+    (Grid will fill with items between 100px and 1fr of avaliable space) <br>
+    Step 11) Amend Size of block-domain__prices ~  margin: 4rem auto; | max-width: 670px; <br> 
+    Step 12) 
+
+    <section class="block container block-domain">
+      <header class="block__header">
+        <h2>What crew do you like the look of?</h2>
+        <p>Lorem ipsum dolor sit amet. Look at these options</p>
+          <div class="input-group">
+        <input type="text" class="input" placeholder="See who's hiring..." />
+        <button class="btn btn--accent">
+          <img src="Project/images/pirateLogo.png" class="icon .icon--white" />
+          Search
+        </button>
+      </header>
+  
+      </div>
+      <ul class="list block-domain__prices">
+        <li class="badge badge--secondary">Blackbeard</li>
+        <li>Redbeard</li>
+        <li>Bluebeard</li>
+        <li>Whitebeard</li>
+        <li>Sockface</li>
+        <li>Peggy</li>
+      </ul>
+    </section>
+
+    <script src="/Project/js/main.js"></script>
+  </body>
+</html>
