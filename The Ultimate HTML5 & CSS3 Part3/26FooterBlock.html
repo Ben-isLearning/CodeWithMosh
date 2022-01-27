@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,400;0,800;1,200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Project/css/style.css" />
+
+    <title>Document</title>
+
+    <style>
+      /* Copied from style.css so this page functions as a standalone */
+    </style>
+  </head>
+
+  <body>
+    Quite the challenge. <br />
+    On mobile: Logo 1st col / List of collapsables <br />
+    On desktop: logo Last row / collapsables always expanded. <br />
+
+    Step 1: HTML Element.Block <br />
+    Step 2: div .container .grid <br />
+    Step 2: Mob -1col | Desktop -6col <br />
+    Step 3: Copy/paste collapsable component <br />
+    Step 4: replace div with section <br />
+    Step 5: copy / paste Sections <br />
+    Step 6: Styling - Border and padding between items <br />
+    Step 6: create class="footer__section"<br />
+    step 7: Styling - text transformation / decoration <br />
+    Step 7: create class="footer__heading" <br />
+    Step 8: HMTL Section - add img (logo) and p (copyright) <br />
+    Step 8: Style new section <br />
+    Step 8: footer__brand | footer__copyright <br />
+    step 9: Mobile is done! (The style atleast) <br />
+    Step 10: @media <br />
+    Step 10: new class to hold individual grid styles "footer__sections" <br />
+    Step 11: Looks good, few issues. Remove clickables. Show hidden content.
+    <br />
+    Step 11: New rule targeting "collapsible__arrow" inside "footer" to set
+    display:hidden; <br />
+    Step 11: New rule targeting "collapsible__content" inside "footer" to set
+    opacity: 1; + max-height: 100%;.. <br />
+    To overcome the settings made prior in the collapsible section. <br />
+    Step 12: New rule targeting "footer__brand" to set order: -1; to move it
+    before everything else. <br />
+    Step 13: Text needs to be bigger... target "footer__copyright" to set
+    text-size: 1.5rem: <br />
+    Step 14: strange spacing issues... Inspect... Top-margin causing issues.
+    <br />
+    Step 14: change margin-top: 2rem; for desktop. <br />
+    Step 15: remove border below each section <br />
+    Step 15: new rule targeting "footer__section" to set border:0; <br />
+    Step 16: Change font size of heading text... <br />
+    Step 16: new rule targeting "footer__heading" to set font-size:1.6rem;
+    <br />
+    Step 17: Replace paragraphs with clickable Unordered Lists (full of a tags)
+    <br />
+    Step 18: Style Links.. <br />
+    Step 18: Set color for links. <br />
+    Step 18: Set color for links:hover <br />
+    Step 19: Set transition: color 0.3s for a nice trasition <br />
+    Step 20: find where extra padding is coming from... <br />
+    Step 20: Create rule targeting "list" inside "footer__section" to set
+    margin: 0; <br />
+    Step 21: issue! ~ Image isnt behaving as it should - its not responsive. <br>
+    Step 21: new rule targeting "img" inside "footer__brand" should be width:100% <br>
+    Step 21: Compensate - dont let the image get too big set maxwidth. (set to 100px) <br>
+    <br />
+
+    <br />
+
+    <br />
+    <br />
+
+    <footer class="block block--dark footer">
+      <div class="container grid footer__sections">
+        <section class="collapsible footer__section">
+          <header class="collapsible__header">
+            <h3 class="collapsible__heading footer__heading">Our Crews</h3>
+
+            <svg class="icon icon--primary collapsible__arrow">
+              <use xlink:href="/Project/images/spriteB.svg#arrow"></use>
+            </svg>
+          </header>
+          <div class="collapsible__content">
+            <ul class="list">
+              <li class="list__item"><a href="#">Best</a></li>
+              <li class="list__item"><a href="#">Popular</a></li>
+              <li class="list__item"><a href="#">Highest Paying</a></li>
+            </ul>
+          </div>
+        </section>
+        <section class="collapsible footer__section">
+          <header class="collapsible__header">
+            <h3 class="collapsible__heading footer__heading">Terms</h3>
+
+            <svg class="icon icon--primary collapsible__arrow">
+              <use xlink:href="/Project/images/spriteB.svg#arrow"></use>
+            </svg>
+          </header>
+          <div class="collapsible__content">
+            <ul class="list">
+              <li class="list__item"><a href="#">Wages</a></li>
+              <li class="list__item"><a href="#">Booty</a></li>
+              <li class="list__item"><a href="#">Extras</a></li>
+            </ul>
+        </section>
+
+        <section class="collapsible footer__section">
+          <header class="collapsible__header">
+            <h3 class="collapsible__heading footer__heading">About Us</h3>
+
+            <svg class="icon icon--primary collapsible__arrow">
+              <use xlink:href="/Project/images/spriteB.svg#arrow"></use>
+            </svg>
+          </header>
+          <div class="collapsible__content">
+            <ul class="list">
+              <li class="list__item"><a href="#">Contact</a></li>
+              <li class="list__item"><a href="#">Address</a></li>
+              <li class="list__item"><a href="#">Legal</a></li>
+            </ul>
+          </div>
+        </section>
+        <section class="footer__brand ">
+          <img src="Project/images/pirateLogo.png" alt="" />
+          <p class="footer__copyright">Copyright 2022 Ben Wingrove</p>
+        </section>
+      </div>
+    </footer>
+
+    <script src="/Project/js/main.js"></script>
+  </body>
+</html>
