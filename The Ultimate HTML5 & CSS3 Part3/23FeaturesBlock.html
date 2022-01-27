@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,400;0,800;1,200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Project/css/style.css" />
+
+    <title>Document</title>
+
+    <style>
+      /* Copied from style.css so this page functions as a standalone */
+    </style>
+  </head>
+
+  <body>
+    <h1>Features Block</h1>
+
+    Inspect Design sheet; 1 header: heading + p <br />
+    2 col grid <br />
+    1st: icon / heading / p / link <br />
+    2nd: image <br />
+    Next Line <br />
+    1st: image <br />
+    2nd: icon / heading / p / link <br />
+    <br />
+
+    we have build most of this, missing the actual feature component <br />
+    that allows placement of text / images. <br />
+
+    Step 1: HTML Shell ~ "self contained content" ~ Article <br />
+    Step 2: 1st Div inside Article ~ 1st box <br />
+    Step 2: 1st Div ~ Icon ~ copy/paste <br />
+    Step 2: 1st Div ~ Heading ~ What h? Check headings... need next 1 down h3!
+    Step 2: 1st Div ~ paragraph ~ Lorem <br />
+    Step 2: 1st Div ~ Link ~ Copy + Paste<br />
+    Looks Good structurally. <br />
+    Step 3: Style ~ remove top margin from h3, specifically this one. not all
+    h3s. <br />
+    Style Looks good - so far! <br />
+    Step 4: 2nd Div ~ Image ~ Copy+Paste image / picture used before. <br />
+    Step 4: 2nd Div ~ Picture - insert 4 sources 2 types / 2 densities. <br />
+    Step 4: 2nd Div too close to container ~ add class to style container
+    "feature" <br />
+    Step 4: 2nd Div ~ Style ~ Add gap: 4rem 2rem; <br />
+    Step 4: 2nd Div ~ Image ~ amend image class from "hero__image" to
+    "feature__image" <br />
+    Step 4: 2nd Div ~ Image ~ Style feature__image to width:100% for
+    responsiveness <br />
+    Looks great! <br />
+    Step 5: HTML Container ~ Put all articles inside a section <br />
+    Step 5: HTML Container ~ insert classes "block" and "container" made prior
+    <br />
+    Step 6: Duplicate article.
+    <br />
+    Amending some issues... <br />
+    Step 7: amend vertical margin between features. margin: 12rems; <br />
+    Step 8: amend order of items... <br />
+    Step 8: add class for grid block elements; class="feature__content" <br />
+    Step 8: Style class - .feature:nth-of-type(even) .feature__content { order:
+    2; } <br />
+    So that odd elements have a different order. <br />
+    ++ Much better than moving HTML block by block <br />
+    Step 9: HTML header - Between section and article - add header. <br />
+    Step 9: add h2 / p tag inside header <br />
+    Step 9: amend style of HTML Header -
+    <br />
+
+    <br />
+
+    <section class="block container">
+      <header class="block__header">
+        <h2>Our adventures so far</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero, ex.
+        </p>
+      </header>
+      <article class="grid grid--cols-2 feature">
+        <div class="feature__content">
+          <img src="Project/images/pirateLogo.png" class="icon icon--white" />
+          <h3 class="feature__heading">Yo Ho Ho!</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+            nisi suscipit cumque repellat aliquam sunt?
+          </p>
+          <a href="#" class="link-arrow">Learn More </a>
+        </div>
+        <div>
+          <picture>
+            <source
+              type="image/webp"
+              srcset="
+                /Project/images/ship.webp    1x,
+                /Project/images/ship@2x.webp 2x
+              " />
+            <source
+              type="image/png"
+              srcset="
+                /Project/images/ship.png    1x,
+                /Project/images/ship@2x.png 2x
+              " />
+            <img class="feature__image" src="/" alt=""
+          /></picture>
+        </div>
+      </article>
+
+      <article class="grid grid--cols-2 feature">
+        <div class="feature__content">
+          <img src="Project/images/pirateLogo.png" class="icon icon--white" />
+          <h3 class="feature__heading">Yo Ho Ho!</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+            nisi suscipit cumque repellat aliquam sunt?
+          </p>
+          <a href="#" class="link-arrow">Learn More </a>
+        </div>
+        <div>
+          <picture>
+            <source
+              type="image/webp"
+              srcset="
+                /Project/images/ship.webp    1x,
+                /Project/images/ship@2x.webp 2x
+              " />
+            <source
+              type="image/png"
+              srcset="
+                /Project/images/ship.png    1x,
+                /Project/images/ship@2x.png 2x
+              " />
+            <img class="feature__image" src="/" alt=""
+          /></picture>
+        </div>
+      </article>
+    </section>
+    <br />
+
+    <script src="/Project/js/main.js"></script>
+  </body>
+</html>
