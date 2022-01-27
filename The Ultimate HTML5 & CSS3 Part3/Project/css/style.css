@@ -643,6 +643,7 @@ it will bleed into other rules. */
 
 .block__header {
   text-align: center;
+  margin-bottom: 4rem;
 }
 
 .block__heading {

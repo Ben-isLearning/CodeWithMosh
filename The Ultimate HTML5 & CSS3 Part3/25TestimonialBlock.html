@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,400;0,800;1,200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Project/css/style.css" />
+
+    <title>Document</title>
+
+    <style>
+      /* Copied from style.css so this page functions as a standalone */
+    </style>
+  </head>
+
+  <body>
+    <h1>Testimonial Block</h1>
+    Create HTML Shell ~ section with a header containing h2 + p <br />
+    Copy and paste all prior created elements.. <br />
+    Looks good... one issue, need more margin between testionial and header...
+    <br />
+    Set this in block__header <br />
+    Super easy!
+
+    <section class="block">
+      <header class="block__header">
+        <h2>What our hires are saying</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis,
+          error.
+        </p>
+      </header>
+      <div class="card testimonial">
+        <div class="grid grid--cols-2">
+          <div class="testimonial__image">
+            <img src="/Project/images/man.jpg" alt="a happy, employed person" />
+            <span class="icon-container icon-container--body">
+              <svg class="icon icon--small icon--white">
+                <use xlink:href="./Project/images/spriteA.svg#ten"></use>
+              </svg>
+            </span>
+          </div>
+          <div>
+            <blockquote class="quote">
+              <p class="quote__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aperiam, fugiat.
+              </p>
+              <footer>
+                <div class="media">
+                  <div class="media__image">
+                    <svg class="icon .icon--primary quote__image">
+                      <use xlink:href="./Project/images/spriteA.svg#zero"></use>
+                    </svg>
+                  </div>
+                  <div class="media__body">
+                    <h3 class="media__title quote__author">John Doe</h3>
+                    <p class="quote__organization">HTML Rockstar</p>
+                  </div>
+                </div>
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="/Project/js/main.js"></script>
+  </body>
+</html>
