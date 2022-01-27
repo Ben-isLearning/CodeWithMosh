@@ -226,7 +226,7 @@ it will bleed into other rules. */
   font-weight: 600;
   margin: 1rem 0;
   outline: 0;
-  padding: 2rem 3rem;
+  padding: 2rem 4vw;
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
@@ -324,6 +324,7 @@ it will bleed into other rules. */
   border: 0;
   flex-grow: 1;
   padding: 1.5rem 2rem;
+  width: 0;
 }
 
 .input-group .btn {
@@ -706,13 +707,13 @@ it will bleed into other rules. */
 }
 
 .nav__toggler {
-  opacity: 0.5;
+  opacity: 1;
   transition: box-shadow 0.5s;
   cursor: pointer;
 }
 
 .nav.collapsible--expanded .nav__toggler {
-  opacity: 1;
+  opacity: 0.8;
 }
 
 .nav__brand {
@@ -771,14 +772,15 @@ it will bleed into other rules. */
 
 .block-domain__prices {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 6rem);
   font-size: 2rem;
   font-weight: 600;
   justify-items: center;
-  align-items: center;
+  align-content: center;
   max-width: 700px;
   margin: 0 auto;
+  color: var(--color-heading);
 }
 
 @media screen and (min-width: 768px) {
