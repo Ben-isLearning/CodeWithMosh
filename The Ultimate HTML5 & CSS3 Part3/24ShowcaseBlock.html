@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,400;0,800;1,200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Project/css/style.css" />
+
+    <title>Document</title>
+
+    <style>
+      /* Copied from style.css so this page functions as a standalone */
+    </style>
+  </head>
+
+  <body>
+    <h1>Showcase Block</h1>
+    <p>
+      Block to showcase an aspect of the website <br />
+      Mobile: Header | Image | media | media | media (1 col grid) <br />
+      Desktop: Header | Image \/ 3 media (2 col grid) <br />
+      Mobile ~ fluid image ||| Desktop ~ Static image <br />
+      Image: 700px / 1400px (@2x) <br />
+
+      <br />
+      Step 1) HTML Container ~ section .block .block--dark .block--skewed-right
+      <br />
+      Step 2) HTML Header .block__header <br />
+      Step 2) content <br />
+      Step 3) HTML Div (grid) ~ .container .grid .grid--cols-2 <br />
+      Step 4) 1st item: Image <br />
+      Step 5) 2nd item: Pargraph (Temporary styling aid) <br />
+      Step 6) Layout ~ <br />
+      Step 6) Amend h2 to white - add class "block__heading" <br />
+      Step 6) Refactor css rule ~ From .block--dark .block__heading to <br />
+      Step 6) Refactor css rule ~ To .block--dark h1, (and so on) <br />
+      Step 6) remove extra class from header. <br />
+      Step 7) amend image to be responsive - give class="block-showcase__image"
+      <br />
+      Step 7) width:100% usually, but @media more than Xpx, width:auto
+      <br />
+      Step 8) image is behaving strangely on mobile... redefine grid to take 50%
+      50%, not 1fr 1fr. <br />
+      (This will restrict size of grid to 50% of its parent, rather than 1fr of
+      avaliable space) <br />
+      Step 8) But now the text overlaps the image... Step 8) To resolve this we
+      need to align the firt element in the grid (image) to the <br />
+      right, to prevent overlaping. <br />
+      Step 8) justify-self: end; to prevent the overlap. <br />
+      Step 9) But now the image extends past the grid.... (and off the screen)
+      <br />
+      Step 9) apply a max-width to prevent this from happening. <br />
+      Step 10) Wrap the single image, in a picture element to provide many
+      sources. <br />
+      Step 11) Layout has broken... <br />
+      Step 11) Move grid-item class "block-showcase__image" from the nested
+      image, onto the picture element <br />
+      Step 12) move css width + maxwidth from "block-showcase__image" rule to
+      dedicated "block-showcase__image > img" rule <br />
+      Step 12) ++ amend other rules targeting block-showcase__image <br />
+      Step 13) Replace p with ul x 3 li's <br />
+      Step 13) Copy + Paste media components we made earlier <br />
+      Step 14) Add "list" class to UL Step 14) Realise we made a mistake -
+      "list" modifies both structure and color. <br />
+      Step 14) move color attribute from 1 rule to another <br />
+      Step 15) List item headings are a little too thick here.. <br />
+      Step 15) Reduce h3 font-weight globally. <br />
+      Step 16) block--skewed-left is cutting into the image... <br />
+      Step 16) Change skewed properties from 80% to 90% to get a softer angle.
+      <br />
+      Step 16) Remove redundant code caused by this change. <br />
+      Step 17) Media items need to be seperated - amend bottom margin! <br />
+      Step 18) selecting font looks ugly - Fix it! <br />
+      Step 19) Add gap between image and list on large screens <br />
+
+      <br />
+
+      <br />
+    </p>
+
+    <section class="block block--dark block--skewed-right block-showcase">
+      <header class="block__header">
+        <h2 class="block__heading">All around the world!</h2>
+      </header>
+      <div class="container grid grid--cols-2">
+        <picture class="block-showcase__image">
+          <source
+            type="image/webp"
+            srcset="
+              /Project/images/world.webp    1x,
+              /Project/images/world@2x.webp 2x
+            "
+          />
+          <source
+            type="image/png"
+            srcset="
+              /Project/images/world.png    1x,
+              /Project/images/world@2x.png 2x
+            "
+          />
+
+          <img src="/Project/images/world.webp" alt="" />
+        </picture>
+        <ul class="list">
+          <li>
+            <div class="media">
+              <div class="media__image">
+                <img
+                  src="Project/images/pirateLogo.png"
+                  class="icon icon--small"
+                />
+              </div>
+              <div class="media__body">
+                <h3 class="media__title">3 Step program</h3>
+                <p>
+                  Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet
+                  consectetur adipisicing elit. Non, ullam.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="media">
+              <div class="media__image">
+                <img
+                  src="Project/images/pirateLogo.png"
+                  class="icon icon--small"
+                />
+              </div>
+              <div class="media__body">
+                <h3 class="media__title">3 Step program</h3>
+                <p>
+                  Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet
+                  consectetur adipisicing elit. Non, ullam.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="media">
+              <div class="media__image">
+                <img
+                  src="Project/images/pirateLogo.png"
+                  class="icon icon--small"
+                />
+              </div>
+              <div class="media__body">
+                <h3 class="media__title">3 Step program</h3>
+                <p>
+                  Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet
+                  consectetur adipisicing elit. Non, ullam.
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <script src="/Project/js/main.js"></script>
+  </body>
+</html>
