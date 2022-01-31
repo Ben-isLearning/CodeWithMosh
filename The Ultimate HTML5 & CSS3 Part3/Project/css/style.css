@@ -491,7 +491,7 @@ it will bleed into other rules. */
   color: var(--color-heading);
   opacity: 0.6;
   font-size: 2rem;
-  font-size: normal;
+  font-weight: normal;
 }
 
 .quote__image {
@@ -557,7 +557,7 @@ it will bleed into other rules. */
 @media screen and (min-width: 786px) {
   .testimonial .quote,
   .testimonial .quote__author {
-    font-style: 2.4rem;
+    font-size: 2.4rem;
   }
 }
 
@@ -576,7 +576,7 @@ it will bleed into other rules. */
 .callout__heading {
   color: white;
   margin-top: 0;
-  font-style: 3rem;
+  font-size: 3rem;
 }
 
 .callout .btn {
