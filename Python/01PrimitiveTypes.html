@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 1</title>
+</head>
+<body>
+
+    <section class="variables">
+        <h2>Variables</h2>
+        <p>
+        Used to store data in the computers memory. <br>
+        Ex: students_count = 1000 <br>
+        The value: 1000 will be stored in memory <br>
+        the variable: students_count will be used as a 'reference' for the value. <br><br>
+
+        Variables can be: Boolean | (Number) Integer/Float | String <br>
+        student_count = 1000 ~ Integer <br>
+        student_rating = 4.23 ~ Float <br>
+        is_published = False ~ Boolean WITH CAPITALISATION<br>
+        school_name = "Lorem Ipsum Academy" ~ String <br>
+     </p>
+    </section>
+
+    <section class="variableNames">
+        <h2>Variable Names</h2>
+        <p>
+            1) Variable Names must be Descriptive + Meaningful (No magic numbers) <br>
+            2) Use Single case - Consistently!  <br>
+            3) Used _ to seperate variable names. - PEP best practice <br>
+            4) Use Spaces! Avoid dity code. <br>
+                </p>
+    </section>
+
+    <section class="strings">
+        <h2>Strings</h2>
+        <p>
+            course = "Python Programming" <br>
+            <br>
+            longmessage = <br> """ Dear John, <br> I want to keep this format <br>
+            Thanks! """ <br><br>
+        </p>
+       <div class="functions">
+         <p>
+            <strong>len()</strong> Returns the length of a string <br>
+            <br>
+            menu = "Sausage Bacon Eggs Beans Spam Toast" <br>
+            print(len(menu)) <br>
+            <br>
+            Returns 35 <br>
+            <br>
+            print(menu[0]) <br>
+            Returns index [0] of the string <br>
+            Returns "S" <br>
+            <br>
+            
+            print(menu[-1]) <br>
+            Returns Index [-1] if the string (1 before zero / Last character) <br>
+            Returns "t" <br><br>
+
+            print(menu[0:7]) <br>
+            Returns characters from index [0:x] to index [x:7]  <br>
+            Returns "Sausage" <br><br>
+    
+            print(menu[0:]) <br>
+            Returns characters from index [0:x] to .... (Unspecified / End) <br>
+            Returns "Sausage Bacon Eggs Beans Spam Toast" <br><br>
+
+            print(menu[:7]) <br>
+            Returns characters from .... (unspecified / Beginning) to index [x:7] <br>
+            Returns "Sausage" <br><br>
+
+            print(menu[:]) <br>
+            Returns characters from ....(unsepcifed / Start) to ... (Unspecified / End) <br>
+            Returns "Sausage Bacon Eggs Beans Spam Toast" (Entire String) <br>
+         </p>
+        </div>
+        <div class="escapeSequences">
+            <h2>Escape Sequences</h2>
+            <p> 
+            "Escape (The next) Character" = \ <br>
+            \" | \' | \\ 
+            Comment = # <br>
+            Linebreak  = \n <br>
+                        
+            pie = "Ben's "amazing" pie" ~ Will cause a huge error  <br>
+            <br>
+            Seperate inner and outer quotation. <br> 
+            <br>
+            pie = "Ben's 'amazing' pie" ~ Will be OK! <br>
+            <br>            
+            Or overcome the rules with an "Escape Character" (backslash). <br>
+            <br>
+            pie = "Ben's \"amazing\" pie" ~ Will be OK! <br>
+            <br>
+            </p>
+        </div>
+
+        <div class="formattedStrings">
+            <h2>Formatted Strings</h2>
+            <p>
+                first = "Ben" <br>
+                last = "Win" <br> <br>
+
+                full1 = first + " " + last  <br>
+                print (full1) <br>
+                #Concatenation ~ Oldschool  <br><br>
+
+                full2 = f"{first} {last}"   <br>
+                print (full2)    <br>
+                #Formatting strings  <br> <br>
+            </p>
+        </div>
+
+        <div class="stringMethods">
+            <h2>String Methods</h2>
+            <p>
+                Functions Inside an Object become Methods <br>
+                <br>
+                course = "Python Programming" <br>
+                couse.method() <br> 
+                couse.index() <br>
+
+                .upper() ~ Create new string in UPPERCASE <br>
+                .lower() ~          in lowercase <br>
+                .title() ~ In Pascal Case <br>
+                .strip() ~ Strips whitespace off input <br>
+                .lstrip()~ Strips whitespace off Left  <br>
+                .rstip() ~                    off right <br>
+                .find() ~ finds the starting index of whatever its given <br>
+                .replace("xxx", "yyy") ~ Replaces first data in string, with second data. <br>
+                ("xxx" in variable) ~ Checks to see if xxx exists inside the variable - returns Boolean <br>
+                 **find() returns index ~ "xxx" in variable Returns Boolean. <br>
+                ("yyy" not in variable) ~ Checks to see if yyy does NOT exist inside the variable - Returns Boolean <br>
+            </p>
+        </div>
+    </section>
+
+    <section class="numbers">
+        <div class="numbers">
+            <h2> 3 types of numbers</h2>
+            <p> 
+                Integer = 1  <br>
+                Float = 1.333 <br>
+                Complex = 1 + 2j <br>
+            </p>         
+        </div>
+        <div class="math">
+            print(10 + 3) <br>
+            print(10 * 3)  <br>
+            print(10 / 3)  <br>
+            print(10 // 3) Divide to whole number<br> 
+            print(10 % 3)  Remainder of Division<br>
+            print(10 ** 3) Left to the power of Right (10 * 10 * 10)<br> 
+            <br><br>
+
+            Assignment Operator <br>
+            x = 10 <br>
+            x = x + 3 <br>
+            x = 13 <br>
+            <br>
+
+            Augmented Assignment Operator <br>
+            x = 10 <br>
+            x += 3 <br>
+            x = 13 
+        </div>
+
+        <div class="WorkingwithNumbers">
+            <h2> Working With Nubers - Methods</h2>
+            <p>
+                "import math"   <br>
+                On the python code to use complex math functions. <br>
+
+                <a href="https://docs.python.org/3/library/math.html">https://docs.python.org/3/library/math.html</a>
+            </p>
+        </div>
+
+
+    </section>
+
+    <section class="TypeConversion">
+        <h2>Type conversion</h2>
+        <p>
+            User input always comes back as a string value. <br>
+
+            x = input("x: ") <br>
+            y = x + 1       <br>
+
+            This will appear as... <br>
+            "1" + 1 <br>
+            And it'll break. <br>
+            <br>
+            <br>
+            Method to Check type of variable; <br>
+            type(x) <br><br>
+
+            Methods for Changing types;     <br>
+            int(x)     <br>
+            float(x)    <br>
+            bool(x)    <br>
+            str(x)    <br>
+            <br>
+
+            <br>
+            Falsy Values: <br>
+            "" ~ False     <br>
+            0 ~  False      <br>
+            None ~ False <br>
+        </p>
+
+        <div class="quiz">
+
+            <p>
+                1) What are the primitive types in python? <br>
+                    Boolean | String | Integer | Float | Complex <br> <br>
+
+                2) fruit = "Apple" <br>
+                print(fruit[1]) <br>
+                What will this code print? <br>
+                It will print "p" <br><br>
+                What about print(fruit[1:-1])? <br>
+                It will print "ppl" <br><br>
+                3) What is the result of 10 % 3? <br>
+                the result will be 1 <br><br>
+                4) What will print(bool("False")) show? <br>
+                it will show True <br><br>
+                
+
+
+            </p>
+        </div>
+    </section>
+
+
+
+
+</body>
+</html>
