@@ -1,0 +1,31 @@
+Coding along with https://codewithmosh.com/p/python-programming-course-beginners
+
+Aims: 
+
+Each Lesson should have a .txt + .py file
+To explain + demonstrate what I have learned. 
+
+Aiming for 2 chapters a Day. 
+This course 'should' take me 7 working days, but thats only a target. 
+
+some chapters may take longer, some may take shorter. 
+I may struggle, i might even ragequit from the chapter for a period. 
+
+Here's to learning Python! (15/02/2022)
+
+Scheduel;  (Hopefully!)
+
+1 - 16/02/22
+2 - 17/02/22 
+
+3 - 21/02/22
+4 - 22/02/22
+3 - 23/02/22
+4 - 24/02/22
+5 - 25/02/22
+
+6 - 28/02/22
+7 - 01/03/22 
+
+
+
