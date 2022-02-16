@@ -1,0 +1,37 @@
+Quiz
+
+Q) What are the primative types in python? 
+
+Boolean | String | Int / Float / Complex
+
+
+Q) What prints? 
+
+fruit = "Apple"
+print(fruit[1])
+
+A) "p"
+
+
+Q) What prints? 
+
+fruit = "Apple" 
+print(fruit[1:-1])
+
+A) "ppl"
+
+
+Q) What is the result? 
+
+10 % 3 
+
+10/3 = 3 + 3 + 3 + 1 
+
+A) 1 
+
+
+Q) What prints? 
+
+print(bool("False"))
+
+A) True ~ String contains something, thus is truthy.

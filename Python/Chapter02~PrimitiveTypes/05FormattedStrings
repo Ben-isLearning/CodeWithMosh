@@ -1,0 +1,22 @@
+Formatted strings
+
+The new way of combining strings is by formatting.
+
+f"text goes here {variable here} more text or whatever you like" 
+
+the value of the variables will be evaluated at runtime. 
+
+
+first = "Ben" 
+last = " likes code"
+
+full = f"{first} really {last}"
+>>Returns "Ben really likes code"
+
+
+
+formatted strings can also contain functions and expressions. 
+
+
+test = f"{len(first)} as well as {2 + 2}"
+>>Returns 3 as well as 4

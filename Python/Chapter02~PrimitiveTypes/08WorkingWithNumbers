@@ -1,0 +1,8 @@
+Working With Numbers;
+Need to import math module!     <Almost like plugging in an extra memory stick full of data 
+
+"import math"
+
+
+round()             < Rounds
+abs()               < Returns absolute value (Can turn neg to pos)

@@ -1,0 +1,14 @@
+Truthy or Falsy
+Are not boolean True or False values, but are interpreted as such.
+
+Falsy; 
+
+""          < Empty String
+0           < Number Zero
+None        < Object None
+
+
+All other values, that represent a something (Rather than a nothing)
+
+2           < Any Num
+"abc"       < Full string

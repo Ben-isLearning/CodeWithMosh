@@ -1,0 +1,7 @@
+Type
+
+Type() is used to check the type of variable its given 
+
+as an arguement we pass a variable.
+
+Ex: type(variable_one)

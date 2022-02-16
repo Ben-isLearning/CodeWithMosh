@@ -1,0 +1,22 @@
+Type Conversions
+
+Attempting to add "1" and 1 causes an error. 
+
+Because it we could be asking two different things, and python cant do both (at the same time)
+
+1 + 1 is fine
+
+"1" + "1" is fine too.  >>we cant mix types. <<
+
+But we can change them!!
+
+
+int(x)      < Convert to Integer
+float(x)    < Convert to float
+bool(x)     < Convert to boolean 
+stri(x)     < Convert to string
+
+
+
+
+

@@ -1,0 +1,21 @@
+Numbers
+
+1) Integer              x = 1
+2) Float                x = 3.14
+3) Complex Numbers      x = 1 + 2j    (Probably not gonna use)
+
+Assignment Operator; 
+    =           < Assigns a Value
+
+Math Exists within Python; 
++
+-
+*
+/
+//  < Divide to Integer
+%   < Remainder of Division 
+**  < X ^ Y 
+
+Augmented Assignment Operator: 
+
+    +=          < Assigns new Value

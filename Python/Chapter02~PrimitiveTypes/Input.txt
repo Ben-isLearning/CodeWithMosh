@@ -1,0 +1,10 @@
+Input 
+
+input() is used to receive user input 
+
+as an arguement we pass a string, to act as a label.
+
+**By default, input is always returned as a string**
+
+
+Ex: input("Please input a number  :")

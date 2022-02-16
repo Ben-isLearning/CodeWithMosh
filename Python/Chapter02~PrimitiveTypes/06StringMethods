@@ -1,0 +1,23 @@
+String specific Functions / Methods 
+
+To get an extensive list of functions, create a string then begin to call a function. 
+
+Everything in python is an object > Functions inside of objects are called Methods, accessed by dot notation;
+
+object.method() 
+
+
+string = "i like code"
+string.                    < Will populate dropdown ~ Theres like 100+
+
+
+.upper() ~ Creates new string - Converted to caps
+.lower() ~                    - Converted to lower case 
+.title() ~                    - Converted To Pascal case
+.strip() ~                    - Strips whitespace from L and R 
+.lstrip() ~                   - Strips whitespace from L 
+.rstrip() ~                   - Strips whitespace from R
+.find("x") ~                  - Finds starting index of character / Sequence of characters 
+.replace("x", "y") ~          - Replaces all "x" with "y". 
+"x" in variable  ~            - Checks to see if "x" exists with variable (Returns Boolean)      
+"x" not in variable ~         - Checks to see if "x" does not exist within variable (Returns Boolean)      
