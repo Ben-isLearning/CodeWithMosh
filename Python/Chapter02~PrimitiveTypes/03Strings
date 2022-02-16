@@ -1,0 +1,26 @@
+Strings 
+
+
+string = "a string of characters inside quotation marks" 
+
+
+len(string)            < Will find the length of string
+print(len(string))     < Will print the result. 
+
+
+
+
+Indexing: 
+string[0]       < Returns value of [index] 
+string[-1]      <                           This counts backwards from [0]
+
+Slicing: 
+string[x:y]    > Returns new string snipped from index X to Y. 
+string[x:]     > Returns new string starting from X to ...end of string
+string[:y]     > Returns new string starting from ...start of string to Y
+string[:]      > Returns new string - Exact copy of orginonal. 
+
+Functions: 
+len()       < Find the length of a string
+
+

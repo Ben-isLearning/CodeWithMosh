@@ -1,0 +1,18 @@
+Variables are used to store data in memory
+
+Variables are defined with = 
+
+Ex: 
+
+my_age = 123
+
+print(my_age)
+
+
+
+Variables can be: 
+
+Integer         1 | 21 | 100
+Float           1.32 | 0.99 | 101.12312312 
+Boolean         True | False 
+

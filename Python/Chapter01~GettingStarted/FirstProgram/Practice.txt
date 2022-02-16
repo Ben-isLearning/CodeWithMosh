@@ -1,0 +1,13 @@
+
+print()     
+            < Calling the Print function 
+            < "Executing" The print function 
+
+
+print("Hello World!")
+                        < Providing "Hello World!" as the value / Arguement
+            
+
+print("*" * 10)
+                        < Providing "*" * 10  as the value / Arguement 
+                        

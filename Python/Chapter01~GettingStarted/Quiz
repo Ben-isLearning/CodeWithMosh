@@ -1,0 +1,16 @@
+Q) What is an expression 
+    > Anything that produces a value
+
+A) "An expression is a piece of code that produces a value"
+
+
+Q) What is a syntax error? 
+    > A Grammatical error inside code language
+
+A) "A Syntax error is a kind of error due to bad syntax or grammar in the code"
+
+
+Q) What does a linter do? 
+    > Basically a crutch- highlights mistakes and offers solutions
+
+A) "Linter is a tool that checks our code for potential errors, mostly syntax errors"

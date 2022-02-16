@@ -1,0 +1,12 @@
+<Expression> 
+
+Any think that produces a value, is refered to as an expression.
+
+2 + 2  
+
+2 > 1 
+
+2 > 5 
+
+2 > 
+    (Returns Syntax error / Gramatically Incorrect)
