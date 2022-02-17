@@ -1,6 +1,6 @@
 <Expression> 
 
-Any think that produces a value, is refered to as an expression.
+Anything that produces a value, is refered to as an expression.
 
 2 + 2  
 

@@ -14,5 +14,6 @@ Variables can be:
 
 Integer         1 | 21 | 100
 Float           1.32 | 0.99 | 101.12312312 
-Boolean         True | False 
+Boolean         True | False                    (Dont use true or TRUE)
+String          "Dave" | "Python" | "Mosh" 
 

@@ -8,8 +8,6 @@ len(string)            < Will find the length of string
 print(len(string))     < Will print the result. 
 
 
-
-
 Indexing: 
 string[0]       < Returns value of [index] 
 string[-1]      <                           This counts backwards from [0]

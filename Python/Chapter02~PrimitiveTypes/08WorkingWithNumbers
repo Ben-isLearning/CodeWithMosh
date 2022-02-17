@@ -1,8 +1,17 @@
 Working With Numbers;
 Need to import math module!     <Almost like plugging in an extra memory stick full of data 
+>Math module acts as an Object, as such methods can be called via dot notation 
 
 "import math"
 
 
 round()             < Rounds
 abs()               < Returns absolute value (Can turn neg to pos)
+
+math.ceil()         < Rounds up 
+math.floor()        < Rounds down 
+
+math.isnan()        < Checks if value is nan ~ Returns True if NaN otherwise False
+math.isinf()        < Checks in value is infinite ~ True | False 
+
+math.pi             < mathematical constant 

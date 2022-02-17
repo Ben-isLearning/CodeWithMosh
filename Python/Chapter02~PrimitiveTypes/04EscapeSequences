@@ -7,4 +7,10 @@ string = "Ben said "I like cheese""      ~ Would result in an error
 The escape character \ will enable the next character to escape from the rules of python. 
 Combining \ + " will create an escape sequence ~ \" 
 
+
 string = "Ben said \"I like cheese\""   
+
+\" 
+\' 
+\\
+\n 
