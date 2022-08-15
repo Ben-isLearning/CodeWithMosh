@@ -1,0 +1,176 @@
+Making an API Middleware; 
+
+create new middleware file, middleware/api.js
+
+____________________________________________________
+
+Step 1; Create boilerplate 
+
+    const api = (store) => (next) => (action) => {};
+
+    export default api;
+
+
+step 2; import into store. 
+        Register middleware in store. 
+
+
+        Within our actions, our type will inform the 
+        us of what is occuring in broad strokes, 
+        whereas the payload will contain the fine
+        details. 
+
+        Ex; 
+        const action = {
+            type: "apiCallBegan",
+            payload: {
+                url: "/bugs",
+                method: "get",
+                data: {},
+                onSuccess: 'bugsReceived',
+                onError: "apiRequestFailed"
+            }
+        } 
+
+
+
+step 3;  Check the type of the action. 
+            if its not a "apiCallBegan" action,
+            send it alon the pipeline
+
+    const api = (store) => (next) => (action) => {
+      if (action.type !== "apiCallBegan") {
+        next();
+        return;
+      }
+    };
+
+
+Step 3, Cleaner;
+
+    const api = (store) => (next) => (action) => {
+      if (action.type !== "apiCallBegan") return next();
+    };
+
+    export default api;
+
+
+Install / import Axios 
+
+npm i axios 
+
+import axios from "axios";
+
+
+
+Step 4: derive properties from the action object 
+            using destructuring 
+
+    import axios from "axios";
+
+    const api = (store) => (next) => (action) => {
+      if (action.type !== "apiCallBegan") return next();
+
+      const { url, method, data, onSuccess, onError } = action.payload;
+    };
+
+    export default api;
+
+
+Step 5: use axios to make an API call
+
+    import axios from "axios";
+
+    const api = (store) => (next) => (action) => {
+      if (action.type !== "apiCallBegan") return next();
+
+      const { url, method, data, onSuccess, onError } = action.payload;
+
+      axios.request({
+        baseURL: "http://localhost:9001/api",
+        url,
+        method,
+        data,
+      });
+    };
+
+
+Step 6: declare axios.request as our response, 
+        Wrap in a try block, 
+
+     try{
+          const response = axios.request({
+            baseURL: "http://localhost:9001/api",
+            url,
+            method,
+            data,
+          });
+      }
+
+
+Step 7: add a catch(error) block.
+        (Now we have space to code our success 
+        and error sections.)
+
+      try{
+          const response = axios.request({
+            baseURL: "http://localhost:9001/api",
+            url,
+            method,
+            data,
+          });
+
+      } catch(error) {
+
+      }
+    };
+
+
+Step 8: Destructure store to derive the dispatch 
+        functionality 
+    
+    const api =
+      ({ dispatch }) =>
+      (next) =>
+      (action) => {
+        if (action.type !== "apiCallBegan") return next();
+
+
+Step 9: handle the sucess with a Dispatch  
+        if the try block does not throw an error, 
+        dispatch an action ~ onSuccess
+
+       try {
+      const response = axios.request({
+        baseURL: "http://localhost:9001/api",
+        url,
+        method,
+        data,
+      });
+      dispatch({type: onSuccess, payload: response.data})_
+    } catch (error) {}
+  };
+
+
+step 10: handle the faulure with a Dispatch
+
+        try {
+      const response = axios.request({
+        baseURL: "http://localhost:9001/api",
+        url,
+        method,
+        data,
+      });
+      dispatch({type: onSuccess, payload: response.data})_
+    } catch (error) {
+        dispatch({type: onError, payload: error})
+    }
+  };
+
+
+
+Step 11: Add asyncrounous functionality 
+            async action
+
+            response = await axios.request 
+

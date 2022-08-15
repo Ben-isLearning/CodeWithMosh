@@ -1,0 +1,61 @@
+Actions: 
+
+    function actionCreator() {
+        return {type: "..."};
+    }
+
+
+Thunk: 
+
+    return actionCreator(){
+        return function (dispatch, getState) {
+            //Do Stuff
+        }
+    }
+
+
+Cleaner Thunk: (if we dont need the store)
+
+    const actionCreator = () => {
+        return (dispatch)  => {
+            //Do Stuff
+        }
+    }
+
+
+Cleanest Thunk: (if we dont need the store)
+
+    const actionCreator = () => (dispatch)  => {
+            //Do Stuff
+        } 
+____________________________________________________
+
+
+Example: Get list of bugs from server 
+
+1) call API 
+2) resolved Action 
+3) rejected Action 
+
+
+        Naming Convention: 
+            <data><action/result>
+
+            bugsRequested
+            bugsReceived
+            bugsRequestFailed
+
+
+    const actionCreator = () => (dispatch)  => {
+            //Call api 
+            //Reslove: dispatch(success)
+            //Rejected: dospatch(error)
+        } 
+
+Issue: Repetative, need to take 3 steps every time we speak 
+        to the server. 
+
+Solution: can implement this structure within a middleware 
+        function! 
+
+        

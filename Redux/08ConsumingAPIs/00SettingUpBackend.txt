@@ -1,0 +1,10 @@
+Set up existing backend. 
+
+Backend/index >> npm start 
+
+Launches Node.js server on Port 9001
+
+Supports Put / Patch 
+
+No validation / persistance. 
+

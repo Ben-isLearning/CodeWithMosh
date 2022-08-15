@@ -1,0 +1,149 @@
+Recap: 
+All actions should be plain objects with a type property. 
+
+____________________________________________________
+
+
+store.dispatch({});  == Error 
+
+store.dispatch( () => {} ); == Error
+
+store.dispatch(() => {
+    //Call API 
+    // Promise is resolved => dispatch(data)
+    // Promise is rejected => dispatch(error)
+})
+
+
+We can give the store the ability to dispatch ASYNC functions,
+by writing a middleware function. 
+
+____________________________________________________
+
+Create new file in src/store/middleware ~ func.js
+
+    const func = (store) => (next) => (action) => {};
+
+    export default func;
+
+
+In middleware, we can check the type of the function that 
+is passed.
+If the action is a function, invoke it. 
+otherwise, pass it to the next peice of the pipeline 
+
+
+    const func = (store) => (next) => (action) => {
+      if (typeof action === "function") action();
+      else next(action);
+    };
+
+    export default func;
+
+
+Register middleware in the store 
+
+                The order of the middleware functions matter 
+                1 > 2 > 3 = Correct outcome 
+                2 > 1 > 3 = Weird Janky mess
+
+    const store = configureStore({
+      reducer,
+      middleware: [
+        logger({ desintation: "console" }), 
+        func],
+    });
+
+    export default store;
+
+____________________________________________________
+
+Revisiting and Expandin on 
+
+store.dispatch(() => {
+    //Call API 
+    // Promise is resolved => dispatch(data)
+    // Promise is rejected => dispatch(error)
+})
+____________________________________________________
+
+
+func.js 
+const func = (store) => (next) => (action) => {
+  if (typeof action === "function") action();
+  else next(action);
+};
+
+export default func;
+
+
+store.js 
+  store.dispatch(() => {
+    //Call API
+    // xx
+    // Promise is resolved => dispatch(data)
+    store.dispatch({ type: "bugsReceived", bugs: [1, 2, 3] });
+    //Failure
+  });
+
+
+issue:  index.js has access to store.dispatch, 
+        elsewhere in the code base may not. 
+
+solution: destructure store object within our middleware function 
+          func.js
+          store >>> ({dispatch, getState})
+          Pass these as arguments to the anonymous action()
+          call. 
+
+          pass these arguments to our dispatch call in 
+          index.js, trim the second dispatch, store is no 
+          longer needed. 
+
+
+func.js 
+const func =
+  ({ dispatch, getState }) =>
+  (next) =>
+  (action) => {
+    if (typeof action === "function") action(dispatch, getState);
+    else next(action);
+  };
+
+export default func;
+
+index.js 
+store.dispatch((dispatch, getState) => {
+  //Call API
+  // xx
+  //Success
+  dispatch({ type: "bugsReceived", bugs: [1, 2, 3] });
+  //Failure
+});
+
+____________________________________________________
+ 
+getState is useful for decision making; 
+if getState = X, do A. 
+if getState = y, do B. 
+
+
+Simple demo, log the store from the nested dispatch call
+
+store.dispatch((dispatch, getState) => {
+  //Call API
+  // xx
+  //Success
+  dispatch({ type: "bugsReceived", bugs: [1, 2, 3] });
+  console.log(getState());
+  //Failure
+});
+
+____________________________________________________
+
+// Introducing Thunk 
+
+>Remove Func from store. 
+
+
+>Import 
